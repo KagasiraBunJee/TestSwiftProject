@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  NewsTestProject
+
+  Created by Sergii on 3/26/18.
+  Copyright © 2018 Sergei. All rights reserved.
+*/
+
+"status_title" = "Status";
+"status_online" = "Online";
+"status_offline" = "Offline";
+"players_counter_title" = "Players: %i/%i";
+"player_stats_value" = "%i/%i Score: %i %ims";
+"add_server_alert_msg" = "Add new server";
+"team_name_first" = "First";
+"team_name_second" = "Second";
+"team_queue" = "In Queue";

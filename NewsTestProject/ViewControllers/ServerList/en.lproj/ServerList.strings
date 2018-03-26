@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Players: 0/64"; ObjectID = "2TR-HG-Tfk"; */
+"2TR-HG-Tfk.text" = "Players: 0/64";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Dzw-Zs-hCO"; */
+"Dzw-Zs-hCO.text" = "Label";
+
+/* Class = "UIViewController"; title = "Your servers"; ObjectID = "RuT-VB-PRs"; */
+"RuT-VB-PRs.title" = "Your servers";
+
+/* Class = "UIBarButtonItem"; title = "Add server"; ObjectID = "UIs-Bj-pNw"; */
+"UIs-Bj-pNw.title" = "Add server";
+
+/* Class = "UINavigationItem"; title = "Your Servers"; ObjectID = "tJP-OW-Eq1"; */
+"tJP-OW-Eq1.title" = "Your Servers";
+
+/* Class = "UILabel"; text = "Status:"; ObjectID = "zkc-dv-3oZ"; */
+"zkc-dv-3oZ.text" = "Status:";
+
+/* Class = "UILabel"; text = "Online"; ObjectID = "zu0-BS-FCC"; */
+"zu0-BS-FCC.text" = "Online";

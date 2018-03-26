@@ -12,6 +12,16 @@ import ObjectMapper
 
 extension Server: StaticMappable {
     
+    var fullAddr:String {
+        get {
+            guard let hostname = hostname else {
+                return ""
+            }
+            
+            return String(format: "%@:%i", hostname, port)
+        }
+    }
+    
     public static func objectForMapping(map: Map) -> BaseMappable? {
         
         guard map.JSON["error"] == nil else {
@@ -57,16 +67,6 @@ extension Server: StaticMappable {
     }
     
     class func getServers() -> [Server]{
-        
-        let ctx = CoreDataStackImp.shared.context
-        let request = NSFetchRequest<Server>(entityName: "Server")
-        
-        do {
-            let servers = try ctx.fetch(request)
-            return servers
-        } catch let error {
-            debugPrint(error)
-            return []
-        }
+        return Fetcher(context: CoreDataStackImp.shared.context).fetchAll(entityName: "Server")
     }
 }

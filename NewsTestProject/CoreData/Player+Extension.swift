@@ -10,6 +10,25 @@ import Foundation
 import CoreData
 import ObjectMapper
 
+enum Team: Int {
+    case spectator
+    case first = 1
+    case second = 2
+    
+    var named:String {
+        get {
+            switch self {
+            case .first:
+                return NSLocalizedString("team_name_first", comment: "name of team 1")
+            case .second:
+                return NSLocalizedString("team_name_second", comment: "name of team 2")
+            default:
+                return NSLocalizedString("team_queue", comment: "name of group of people who is in queue")
+            }
+        }
+    }
+}
+
 extension Player: StaticMappable {
 
     public static func objectForMapping(map: Map) -> BaseMappable? {
@@ -33,11 +52,16 @@ extension Player: StaticMappable {
         id <- map["id"]
         name <- map["name"]
         platform <- map["platform"]
-        score <- map["score"]
         tag <- map["tag"]
         timePlayed <- map["timePlayed"]
         viewable <- map["viewable"]
-        servers <- map["server"]
+        
+        score <- (map["score"], Player.transformFromStringToInt())
+        kills <- (map["kills"], Player.transformFromStringToInt())
+        deaths <- (map["deaths"], Player.transformFromStringToInt())
+        rank <- map["rank"]
+        ping <- (map["ping"], Player.transformFromStringToInt())
+        teamId <- (map["teamId"], Player.transformFromStringToInt())
     }
     
 }
@@ -53,6 +77,19 @@ extension Player {
                     return allObjects.toJSON()
                 }
                 return nil
+        })
+    }
+}
+
+extension Player {
+    class func transformFromStringToInt() -> TransformOf<Int32, String> {
+        return TransformOf<Int32, String>(fromJSON: { (value: String?) -> Int32? in
+            return Int32(value!)
+        }, toJSON: { (value: Int32?) -> String? in
+            if let value = value {
+                return String(value)
+            }
+            return nil
         })
     }
 }

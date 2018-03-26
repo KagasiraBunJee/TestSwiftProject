@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A1C-Qd-lFK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="agencyfb-bold.ttf">
+            <string>AgencyFB-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Players ListVC-->
+        <scene sceneID="Y8c-rA-HT3">
+            <objects>
+                <viewController storyboardIdentifier="playerList" automaticallyAdjustsScrollViewInsets="NO" id="QWc-rN-EIC" customClass="PlayersListVC" customModule="NewsTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O0F-kv-2JI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GS-RX-W3W">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="playerItem" rowHeight="50" id="ZGm-UM-mmK" customClass="PlayerCell" customModule="NewsTestProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZGm-UM-mmK" id="q6O-Dv-1me">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSN-c1-HvW">
+                                                    <rect key="frame" x="4" y="8" width="4" height="33.5"/>
+                                                    <fontDescription key="fontDescription" name="AgencyFB-Bold" family="AgencyFB" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Historic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xu1-nu-bRH">
+                                                    <rect key="frame" x="12" y="8" width="46.5" height="33.5"/>
+                                                    <fontDescription key="fontDescription" name="AgencyFB-Bold" family="AgencyFB" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/0 Lat: 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZW-HW-e0W">
+                                                    <rect key="frame" x="299.5" y="8" width="75.5" height="33.5"/>
+                                                    <fontDescription key="fontDescription" name="AgencyFB-Bold" family="AgencyFB" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0768122598528862" green="0.08216945081949234" blue="0.10315627604722977" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="CSN-c1-HvW" firstAttribute="leading" secondItem="q6O-Dv-1me" secondAttribute="leading" constant="4" id="4Yp-lf-cAr"/>
+                                                <constraint firstAttribute="bottom" secondItem="CSN-c1-HvW" secondAttribute="bottom" constant="8" id="A2G-6w-tlp"/>
+                                                <constraint firstItem="xu1-nu-bRH" firstAttribute="top" secondItem="q6O-Dv-1me" secondAttribute="top" constant="8" id="IcK-Xp-ajp"/>
+                                                <constraint firstItem="xu1-nu-bRH" firstAttribute="leading" secondItem="CSN-c1-HvW" secondAttribute="trailing" constant="4" id="Ty7-Bu-Yes"/>
+                                                <constraint firstAttribute="bottom" secondItem="tZW-HW-e0W" secondAttribute="bottom" constant="8" id="VrC-R5-23P"/>
+                                                <constraint firstItem="CSN-c1-HvW" firstAttribute="top" secondItem="q6O-Dv-1me" secondAttribute="top" constant="8" id="cbz-nA-Swo"/>
+                                                <constraint firstAttribute="trailing" secondItem="tZW-HW-e0W" secondAttribute="trailing" id="cid-jm-QUZ"/>
+                                                <constraint firstItem="tZW-HW-e0W" firstAttribute="top" secondItem="q6O-Dv-1me" secondAttribute="top" constant="8" id="o0H-8h-6Hl"/>
+                                                <constraint firstAttribute="bottom" secondItem="xu1-nu-bRH" secondAttribute="bottom" constant="8" id="ymc-cC-p3X"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="placementLabel" destination="CSN-c1-HvW" id="Oud-HB-HGi"/>
+                                            <outlet property="playerName" destination="xu1-nu-bRH" id="TST-gR-sLP"/>
+                                            <outlet property="playerStats" destination="tZW-HW-e0W" id="hQj-Tf-7qe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="QWc-rN-EIC" id="2Yv-Vk-XhL"/>
+                                    <outlet property="delegate" destination="QWc-rN-EIC" id="eqV-Zd-aoP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7GS-RX-W3W" firstAttribute="bottom" secondItem="Uyp-CN-WLq" secondAttribute="bottom" id="7qz-lD-mlG"/>
+                            <constraint firstItem="7GS-RX-W3W" firstAttribute="leading" secondItem="Uyp-CN-WLq" secondAttribute="leading" id="KBw-LO-Osh"/>
+                            <constraint firstItem="7GS-RX-W3W" firstAttribute="top" secondItem="Uyp-CN-WLq" secondAttribute="top" id="qKn-Yn-z6s"/>
+                            <constraint firstItem="7GS-RX-W3W" firstAttribute="trailing" secondItem="Uyp-CN-WLq" secondAttribute="trailing" id="tRz-oh-zc6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Uyp-CN-WLq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yhF-cz-1UL"/>
+                    <connections>
+                        <outlet property="tableView" destination="7GS-RX-W3W" id="jh6-qc-egK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PDd-3C-6Fi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457" y="177"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vV3-f4-q5w">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A1C-Qd-lFK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oE7-68-sRu">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QWc-rN-EIC" kind="relationship" relationship="rootViewController" id="S96-sq-gJM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HyW-dK-yAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-418" y="177"/>
+        </scene>
+    </scenes>
+</document>

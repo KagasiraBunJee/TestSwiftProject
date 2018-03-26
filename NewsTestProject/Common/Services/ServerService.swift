@@ -20,6 +20,8 @@ final class ServerServiceImp: ServerService {
     
     private var api: MoyaProvider<ServerApi>
     
+    static let shared = ServerServiceImp(api: MoyaProvider<ServerApi>())
+    
     init(api: MoyaProvider<ServerApi>) {
         self.api = api
     }
@@ -62,8 +64,14 @@ final class ServerServiceImp: ServerService {
             privateCtx.perform({
                 
                 var objects: [Server] = []
-                for endpoint in endpoints {
-                    if let object = Mapper<Server>(context: privateCtx).map(JSONObject: jsonObject[endpoint]) {
+                if endpoints.count > 1 {
+                    for endpoint in endpoints {
+                        if let object = Mapper<Server>(context: privateCtx).map(JSONObject: jsonObject[endpoint]) {
+                            objects.append(object)
+                        }
+                    }
+                } else {
+                    if let object = Mapper<Server>(context: privateCtx).map(JSONObject: jsonObject) {
                         objects.append(object)
                     }
                 }

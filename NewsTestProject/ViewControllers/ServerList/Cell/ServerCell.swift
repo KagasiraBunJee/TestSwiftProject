@@ -20,9 +20,10 @@ class ServerCell: UITableViewCell {
         let status = data.status
         
         mapName.text = data.name
-        onlineStatus.text = status ? "Online" : "Offline"
+        onlineStatus.text = status ? NSLocalizedString("status_online", comment: "server status online") : NSLocalizedString("status_offline", comment: "server status offline")
         onlineStatus.textColor = status ? .green : .red
-        playerCounter.text = String(format: "Players: %i/%i", data.currentPlayers().count, data.maxPlayers)
+        
+        playerCounter.text = String(format: NSLocalizedString("players_counter_title", comment: "player counter"), data.currentPlayers().count, data.maxPlayers)
         
         if let localImage = Bundle.main.path(forResource: data.mapName?.lowercased(), ofType: "jpg") {
             mapImage.image = UIImage(contentsOfFile: localImage)

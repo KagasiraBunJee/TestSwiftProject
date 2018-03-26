@@ -7,14 +7,13 @@
 //
 
 import UIKit
-import Moya
 import CoreData
 
 class ServerListVC: ParentVC {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private var serverService = ServerServiceImp(api: MoyaProvider<ServerApi>())
+    private var serverService = ServerServiceImp.shared
     private var refresh = UIRefreshControl()
     
     lazy var fetchedResultController:NSFetchedResultsController<Server> = {
@@ -76,7 +75,7 @@ class ServerListVC: ParentVC {
     
     @IBAction func addServerAction(_ sender: Any) {
         
-        let alert = UIAlertController(title: nil, message: "Add new server", preferredStyle: .alert)
+        let alert = UIAlertController(title: nil, message: NSLocalizedString("add_server_alert_msg", comment: "add server title"), preferredStyle: .alert)
         alert.addTextField { (textField) in
             textField.placeholder = "IP address"
             textField.text = "94.250.199.113"
@@ -95,6 +94,12 @@ class ServerListVC: ParentVC {
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showPlayers(of server:Server) {
+        let vc = VCLoader<PlayersListVC>.load(storyboardId: .PlayersList, inStoryboardID: "playerList")
+        vc.server = server
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -127,6 +132,11 @@ extension ServerListVC: UITableViewDataSource {
         }
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let server = fetchedResultController.object(at: indexPath)
+        self.showPlayers(of: server)
+    }
 }
 
 extension ServerListVC: UITableViewDelegate {
@@ -138,7 +148,6 @@ extension ServerListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
-    
 }
 
 extension ServerListVC: NSFetchedResultsControllerDelegate {
