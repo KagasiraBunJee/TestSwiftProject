@@ -1,0 +1,6 @@
+/Pods
+/Carthage
+/build
+/vendor
+/fastlane/report.xml
+.bundle

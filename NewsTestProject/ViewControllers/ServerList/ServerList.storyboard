@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iqO-ae-wW5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="WuN-en-NTx">
+            <objects>
+                <navigationController id="iqO-ae-wW5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Igf-Lo-1Sz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RuT-VB-PRs" kind="relationship" relationship="rootViewController" id="Lz5-Ls-wtJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fHw-Dh-KBX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-764" y="130"/>
+        </scene>
+        <!--Your servers-->
+        <scene sceneID="CPb-fU-r1d">
+            <objects>
+                <viewController title="Your servers" id="RuT-VB-PRs" customClass="ServerListVC" customModule="NewsTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oU6-l1-5Nb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NS6-7u-gAX">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="serverItem" rowHeight="62" id="ZJr-ko-yVm" customClass="ServerCell" customModule="NewsTestProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="62"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZJr-ko-yVm" id="7Fa-rX-bj5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="253" image="mp_abandoned.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="H9b-hN-iRO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="62" id="vgR-nd-5hk"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzw-Zs-hCO">
+                                                    <rect key="frame" x="8" y="8" width="359" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkc-dv-3oZ">
+                                                    <rect key="frame" x="8" y="45.5" width="36.5" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zu0-BS-FCC">
+                                                    <rect key="frame" x="46.5" y="45.5" width="37.5" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players: 0/64" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TR-HG-Tfk">
+                                                    <rect key="frame" x="295.5" y="45.5" width="71" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="zu0-BS-FCC" firstAttribute="top" secondItem="zkc-dv-3oZ" secondAttribute="top" id="3pe-qD-aju"/>
+                                                <constraint firstItem="Dzw-Zs-hCO" firstAttribute="leading" secondItem="7Fa-rX-bj5" secondAttribute="leading" constant="8" id="5ot-bZ-4Qy"/>
+                                                <constraint firstItem="Dzw-Zs-hCO" firstAttribute="top" secondItem="7Fa-rX-bj5" secondAttribute="top" constant="8" id="Ags-Gr-CcR"/>
+                                                <constraint firstItem="2TR-HG-Tfk" firstAttribute="top" secondItem="zkc-dv-3oZ" secondAttribute="top" id="Oah-Xk-Fvw"/>
+                                                <constraint firstItem="H9b-hN-iRO" firstAttribute="leading" secondItem="7Fa-rX-bj5" secondAttribute="leading" id="PWs-9A-vZ3"/>
+                                                <constraint firstAttribute="bottom" secondItem="H9b-hN-iRO" secondAttribute="bottom" id="Wj7-n6-7MT"/>
+                                                <constraint firstAttribute="trailing" secondItem="2TR-HG-Tfk" secondAttribute="trailing" constant="8" id="X2y-Eb-xyP"/>
+                                                <constraint firstAttribute="bottom" secondItem="zkc-dv-3oZ" secondAttribute="bottom" id="XD8-Fz-aln"/>
+                                                <constraint firstItem="zkc-dv-3oZ" firstAttribute="leading" secondItem="7Fa-rX-bj5" secondAttribute="leading" constant="8" id="biR-oI-g8e"/>
+                                                <constraint firstAttribute="trailing" secondItem="H9b-hN-iRO" secondAttribute="trailing" id="kec-QG-u1m"/>
+                                                <constraint firstAttribute="trailing" secondItem="Dzw-Zs-hCO" secondAttribute="trailing" constant="8" id="kko-kv-8ec"/>
+                                                <constraint firstItem="H9b-hN-iRO" firstAttribute="top" secondItem="7Fa-rX-bj5" secondAttribute="top" id="rxv-EO-0Co"/>
+                                                <constraint firstItem="zu0-BS-FCC" firstAttribute="leading" secondItem="zkc-dv-3oZ" secondAttribute="trailing" constant="2" id="weS-Hg-fvT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mapImage" destination="H9b-hN-iRO" id="puS-gf-nNc"/>
+                                            <outlet property="mapName" destination="Dzw-Zs-hCO" id="qNZ-6D-ZHO"/>
+                                            <outlet property="onlineStatus" destination="zu0-BS-FCC" id="tuL-Sn-cAd"/>
+                                            <outlet property="playerCounter" destination="2TR-HG-Tfk" id="4n8-Wi-N0Y"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="RuT-VB-PRs" id="NR4-R6-SFh"/>
+                                    <outlet property="delegate" destination="RuT-VB-PRs" id="fej-xA-ulp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dbW-2L-trJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your Servers" id="tJP-OW-Eq1">
+                        <barButtonItem key="rightBarButtonItem" title="Add server" id="UIs-Bj-pNw">
+                            <connections>
+                                <action selector="addServerAction:" destination="RuT-VB-PRs" id="qbT-3W-N04"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="NS6-7u-gAX" id="da0-sc-oOU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OCx-AK-GQm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.8" y="129.98500749625188"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mp_abandoned.jpg" width="992" height="164"/>
+    </resources>
+</document>
