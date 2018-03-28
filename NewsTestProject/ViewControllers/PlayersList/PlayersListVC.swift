@@ -14,6 +14,7 @@ class PlayersListVC: ParentVC {
     @IBOutlet weak private var tableView: UITableView!
     
     private var serverService = ServerServiceImp.shared
+    private var playerService = PlayerServiceImp.shared
     private var refresh = UIRefreshControl()
     
     var server:Server!
@@ -49,6 +50,19 @@ class PlayersListVC: ParentVC {
         serverService.refreshServers(endpoints: [server.fullAddr], game: .bf4).done { (servers) in
             self.refresh.endRefreshing()
             self.finishLoading()
+        }.catch { (error) in
+            self.finishLoading(with: error.localizedDescription)
+        }
+    }
+    
+    func selectPlayer(_ player:Player) {
+        
+        self.startLoading()
+        playerService.playerStats(playerName: player.name!).done { (stats) in
+            self.finishLoading()
+            let vc = VCLoader<PlayerStatsVC>.load(storyboardId: .PlayerStats, inStoryboardID: "playerStats")
+            vc.player = player
+            self.navigationController?.pushViewController(vc, animated: true)
         }.catch { (error) in
             self.finishLoading(with: error.localizedDescription)
         }
@@ -91,18 +105,11 @@ extension PlayersListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return Team(rawValue: Int(fetchedResultController.sections![section].name)!)?.named
     }
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//
-//        let sectioName = fetchedResultController.sections![section].name
-//
-//        let mainView = UIView()
-//        mainView.backgroundColor = .red
-//
-//        let titleLabel = UILabel()
-//        titleLabel.text = sectioName
-//        mainView.addSubview(titleLabel)
-//        return mainView
-//    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let player = fetchedResultController.object(at: indexPath)
+        self.selectPlayer(player)
+    }
 }
 
 extension PlayersListVC: NSFetchedResultsControllerDelegate {

@@ -43,6 +43,7 @@ extension Player: StaticMappable {
     }
     
     public func mapping(map: Map) {
+        
         dateCheck <- map["dateCheck"]
         dateCreate <- map["dateCreate"]
         dateStreak <- map["dateStreak"]
@@ -56,40 +57,12 @@ extension Player: StaticMappable {
         timePlayed <- map["timePlayed"]
         viewable <- map["viewable"]
         
-        score <- (map["score"], Player.transformFromStringToInt())
-        kills <- (map["kills"], Player.transformFromStringToInt())
-        deaths <- (map["deaths"], Player.transformFromStringToInt())
-        rank <- map["rank"]
-        ping <- (map["ping"], Player.transformFromStringToInt())
-        teamId <- (map["teamId"], Player.transformFromStringToInt())
+        score <- (map["score"], CustomTransform.fromStringToInt())
+        kills <- (map["kills"], CustomTransform.fromStringToInt())
+        deaths <- (map["deaths"], CustomTransform.fromStringToInt())
+        rankValue <- map["rank"]
+        ping <- (map["ping"], CustomTransform.fromStringToInt())
+        teamId <- (map["teamId"], CustomTransform.fromStringToInt())
     }
     
-}
-
-extension Player {
-    class func createTransform(context: NSManagedObjectContext) -> TransformOf<NSSet, [[String: Any]]> {
-        return TransformOf<NSSet, [[String: Any]]>(
-            fromJSON: { (value: [[String: Any]]?) -> NSSet? in
-                return NSSet(array: Mapper<Player>(context: context).mapArray(JSONObject: value!)!)
-        },
-            toJSON: { (value: NSSet?) -> [[String: Any]]? in
-                if let value = value, let allObjects = value.allObjects as? [Player] {
-                    return allObjects.toJSON()
-                }
-                return nil
-        })
-    }
-}
-
-extension Player {
-    class func transformFromStringToInt() -> TransformOf<Int32, String> {
-        return TransformOf<Int32, String>(fromJSON: { (value: String?) -> Int32? in
-            return Int32(value!)
-        }, toJSON: { (value: Int32?) -> String? in
-            if let value = value {
-                return String(value)
-            }
-            return nil
-        })
-    }
 }

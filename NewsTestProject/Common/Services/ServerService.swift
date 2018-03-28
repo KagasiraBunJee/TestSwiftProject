@@ -30,18 +30,14 @@ final class ServerServiceImp: ServerService {
         let pending = Promise<Server>.pending()
         api.request(.addServer(ip: ip, port: port, game: game)).done { (response) in
             
+            var server:Server?
             let jsonString = try response.mapString()
-            let mainCtx = CoreDataStackImp.shared.context
-            let privateCtx = CoreDataStackImp.shared.privateContext
             
-            privateCtx.perform({
-                if let object = Mapper<Server>(context: privateCtx).map(JSONString: jsonString) {
-                    
-                    try! privateCtx.save()
-                    mainCtx.performAndWait {
-                        try! mainCtx.save()
-                        pending.resolver.fulfill(object)
-                    }
+            CoreDataStackImp.shared.perform(backgroundTask: { (context) in
+                server = Mapper<Server>(context: context).map(JSONString: jsonString)
+            }, mainTask: nil, completion: {
+                if let server = server {
+                    pending.resolver.fulfill(server)
                 } else {
                     pending.resolver.reject(NSError.serverNotFound())
                 }
@@ -58,30 +54,26 @@ final class ServerServiceImp: ServerService {
         api.request(.updateServers(endpoints: endpoints, game: game)).done { (response) in
             
             let jsonObject = try response.mapJSON() as! [String:Any]
-            let mainCtx = CoreDataStackImp.shared.context
-            let privateCtx = CoreDataStackImp.shared.privateContext
             
-            privateCtx.perform({
-                
+            var servers:[Server] = []
+            let jsonString = try response.mapString()
+            
+            CoreDataStackImp.shared.perform(backgroundTask: { (context) in
                 var objects: [Server] = []
                 if endpoints.count > 1 {
                     for endpoint in endpoints {
-                        if let object = Mapper<Server>(context: privateCtx).map(JSONObject: jsonObject[endpoint]) {
+                        if let object = Mapper<Server>(context: context).map(JSONObject: jsonObject[endpoint]) {
                             objects.append(object)
                         }
                     }
                 } else {
-                    if let object = Mapper<Server>(context: privateCtx).map(JSONObject: jsonObject) {
+                    if let object = Mapper<Server>(context: context).map(JSONObject: jsonObject) {
                         objects.append(object)
                     }
                 }
-                
-                try! privateCtx.save()
-                mainCtx.performAndWait {
-                    try! mainCtx.save()
-                    pending.resolver.fulfill(objects)
-                }
-
+                servers = objects
+            }, mainTask: nil, completion: {
+                pending.resolver.fulfill(servers)
             })
             
         }.catch { (error) in

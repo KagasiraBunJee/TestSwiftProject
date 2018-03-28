@@ -41,6 +41,21 @@ final class CoreDataStackImp: CoreDataStack {
         return privateCtx
     }()
     
+    func perform(backgroundTask:((NSManagedObjectContext) -> Void)?, mainTask:((NSManagedObjectContext) -> Void)?, completion:(() -> Void)?) {
+        let mainCtx = context
+        let privateCtx = privateContext
+        
+        privateCtx.perform({
+            backgroundTask?(privateCtx)
+            try! privateCtx.save()
+            mainCtx.performAndWait {
+                mainTask?(mainCtx)
+                try! mainCtx.save()
+                completion?()
+            }
+        })
+    }
+    
     func saveContext() {
         if context.hasChanges {
             do {

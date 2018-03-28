@@ -12,6 +12,7 @@ import Foundation
 enum Storyboard: String {
     case ServerList
     case PlayersList
+    case PlayerStats
 }
 
 protocol VCLoaderProtocol {

@@ -11,10 +11,16 @@ import Foundation
 extension NSError {
     
     static func serverNotFound() -> Error {
-        let err = NSError(domain: "mappingError", code: 666, userInfo: [
+        let err = NSError(domain: "mappingError", code: 0, userInfo: [
             NSLocalizedFailureReasonErrorKey: "Server not found"
         ])
         return err
     }
     
+    static func nothingFound() -> Error {
+        let err = NSError(domain: "mappingError", code: 0, userInfo: [
+            NSLocalizedFailureReasonErrorKey: "Nothing found"
+        ])
+        return err
+    }
 }

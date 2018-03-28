@@ -39,14 +39,20 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Historic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xu1-nu-bRH">
-                                                    <rect key="frame" x="12" y="8" width="46.5" height="33.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" text="10/0 Lat: 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZW-HW-e0W">
+                                                    <rect key="frame" x="299.5" y="8" width="75.5" height="33.5"/>
                                                     <fontDescription key="fontDescription" name="AgencyFB-Bold" family="AgencyFB" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/0 Lat: 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZW-HW-e0W">
-                                                    <rect key="frame" x="299.5" y="8" width="75.5" height="33.5"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="r0.png" translatesAutoresizingMaskIntoConstraints="NO" id="IeR-UV-mJZ">
+                                                    <rect key="frame" x="12" y="0.0" width="40" height="49"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="lzO-iA-2ke"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Historic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xu1-nu-bRH">
+                                                    <rect key="frame" x="60" y="8" width="46.5" height="34"/>
                                                     <fontDescription key="fontDescription" name="AgencyFB-Bold" family="AgencyFB" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -57,17 +63,23 @@
                                                 <constraint firstItem="CSN-c1-HvW" firstAttribute="leading" secondItem="q6O-Dv-1me" secondAttribute="leading" constant="4" id="4Yp-lf-cAr"/>
                                                 <constraint firstAttribute="bottom" secondItem="CSN-c1-HvW" secondAttribute="bottom" constant="8" id="A2G-6w-tlp"/>
                                                 <constraint firstItem="xu1-nu-bRH" firstAttribute="top" secondItem="q6O-Dv-1me" secondAttribute="top" constant="8" id="IcK-Xp-ajp"/>
-                                                <constraint firstItem="xu1-nu-bRH" firstAttribute="leading" secondItem="CSN-c1-HvW" secondAttribute="trailing" constant="4" id="Ty7-Bu-Yes"/>
+                                                <constraint firstAttribute="bottom" secondItem="IeR-UV-mJZ" secondAttribute="bottom" id="QBz-Am-dGj"/>
                                                 <constraint firstAttribute="bottom" secondItem="tZW-HW-e0W" secondAttribute="bottom" constant="8" id="VrC-R5-23P"/>
                                                 <constraint firstItem="CSN-c1-HvW" firstAttribute="top" secondItem="q6O-Dv-1me" secondAttribute="top" constant="8" id="cbz-nA-Swo"/>
                                                 <constraint firstAttribute="trailing" secondItem="tZW-HW-e0W" secondAttribute="trailing" id="cid-jm-QUZ"/>
+                                                <constraint firstItem="IeR-UV-mJZ" firstAttribute="centerY" secondItem="q6O-Dv-1me" secondAttribute="centerY" id="dWN-mN-x6f"/>
+                                                <constraint firstItem="tZW-HW-e0W" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xu1-nu-bRH" secondAttribute="trailing" constant="4" id="iUT-5H-y68"/>
+                                                <constraint firstItem="IeR-UV-mJZ" firstAttribute="leading" secondItem="CSN-c1-HvW" secondAttribute="trailing" constant="4" id="kIu-ys-PLR"/>
                                                 <constraint firstItem="tZW-HW-e0W" firstAttribute="top" secondItem="q6O-Dv-1me" secondAttribute="top" constant="8" id="o0H-8h-6Hl"/>
+                                                <constraint firstItem="xu1-nu-bRH" firstAttribute="leading" secondItem="IeR-UV-mJZ" secondAttribute="trailing" constant="8" id="ogl-YR-sdK"/>
+                                                <constraint firstItem="IeR-UV-mJZ" firstAttribute="top" secondItem="q6O-Dv-1me" secondAttribute="top" id="sBt-ai-nC4"/>
                                                 <constraint firstAttribute="bottom" secondItem="xu1-nu-bRH" secondAttribute="bottom" constant="8" id="ymc-cC-p3X"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="placementLabel" destination="CSN-c1-HvW" id="Oud-HB-HGi"/>
                                             <outlet property="playerName" destination="xu1-nu-bRH" id="TST-gR-sLP"/>
+                                            <outlet property="playerRank" destination="IeR-UV-mJZ" id="7A7-rq-1rN"/>
                                             <outlet property="playerStats" destination="tZW-HW-e0W" id="hQj-Tf-7qe"/>
                                         </connections>
                                     </tableViewCell>
@@ -94,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PDd-3C-6Fi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="457" y="177"/>
+            <point key="canvasLocation" x="456.80000000000001" y="176.76161919040482"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vV3-f4-q5w">
@@ -115,4 +127,7 @@
             <point key="canvasLocation" x="-418" y="177"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="r0.png" width="256" height="256"/>
+    </resources>
 </document>

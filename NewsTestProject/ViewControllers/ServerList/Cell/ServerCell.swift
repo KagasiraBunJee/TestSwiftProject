@@ -26,7 +26,12 @@ class ServerCell: UITableViewCell {
         playerCounter.text = String(format: NSLocalizedString("players_counter_title", comment: "player counter"), data.currentPlayers().count, data.maxPlayers)
         
         if let localImage = Bundle.main.path(forResource: data.mapName?.lowercased(), ofType: "jpg") {
-            mapImage.image = UIImage(contentsOfFile: localImage)
+            DispatchQueue.global(qos: .background).async {
+                let image = UIImage(contentsOfFile: localImage)
+                DispatchQueue.main.async {
+                    self.mapImage.image = image
+                }
+            }
         }
         
     }
