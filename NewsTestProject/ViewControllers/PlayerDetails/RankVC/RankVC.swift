@@ -26,20 +26,16 @@ class RankVC: EmbedParentStatVC {
         var progress:Float = 0.0
         var scoreProgressValue = "0/0"
         
-        if let nextRank = stats.rank?.next {
-            imagePath = Bundle.main.path(forResource: nextRank.img, ofType: "png")
+        if let rankStats = stats.rankStat, let currentRank = stats.rank {
+            imagePath = Bundle.main.path(forResource: currentRank.img, ofType: "png")
+            scoreProgressValue = String(format: "%i/%i", currentRank.neededRankScore, currentRank.neededRankScore)
+            progress = 1
             
-            let beginProgressValue = stats.rank!.neededRankScore
-            let nextRankNeed = nextRank.neededRankScore
-            let currentDeltaProgress = stats.currentRankScore - beginProgressValue
-            let nextRankNeedDelta = nextRankNeed - beginProgressValue
-            
-            scoreProgressValue = String(format: "%i/%i", currentDeltaProgress, nextRankNeedDelta)
-            progress = nextRank.rankProgress/100
-        } else if let rank = stats.rank {
-            imagePath = Bundle.main.path(forResource: rank.img, ofType: "png")
-            scoreProgressValue = String(format: "%i/%i", stats.currentRankScore, rank.neededRankScore)
-            progress = 1.0
+            if let nextRank = currentRank.next {
+                imagePath = Bundle.main.path(forResource: nextRank.img, ofType: "png")
+                scoreProgressValue = String(format: "%i/%i", rankStats.rankCurrentRel, nextRank.needRankScoreRel)
+                progress = rankStats.rankProgress/100
+            }
         }
         
         DispatchQueue.global(qos: .background).async {

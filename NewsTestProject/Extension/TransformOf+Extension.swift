@@ -18,16 +18,46 @@ struct MappableTransform<T: BaseMappable> {
         self.context = context
     }
     
-    func relationshipTransform() -> TransformOf<NSSet, [[String: Any]]> {
+    func relationshipSetTransform() -> TransformOf<NSSet, [[String: Any]]> {
+        let trnsf = relationshipSetTransform(withAdditionalKeyValues: nil)
+        return trnsf
+    }
+    
+    func relationshipSetTransform(withAdditionalKeyValues: [String:Any]? = nil) -> TransformOf<NSSet, [[String: Any]]> {
         return TransformOf<NSSet, [[String: Any]]>(
             fromJSON: { (value: [[String: Any]]?) -> NSSet? in
-                return NSSet(array: Mapper<T>(context: self.context).mapArray(JSONObject: value!)!)
+                var jsonObject = value
+                if let adds = withAdditionalKeyValues {
+                    jsonObject = jsonObject?.map({ (values) -> [String: Any] in
+                        return values.merging(adds) { (_, new) in new }
+                    })
+                }
+                return NSSet(array: Mapper<T>(context: self.context).mapArray(JSONObject: jsonObject!)!)
         },
             toJSON: { (value: NSSet?) -> [[String: Any]]? in
                 if let value = value, let allObjects = value.allObjects as? [T] {
                     return allObjects.toJSON()
                 }
                 return nil
+        })
+    }
+    
+    func relationshipSingleObjectTransform() -> TransformOf<T, [String: Any]> {
+        let trnsf = relationshipSingleObjectTransform(withAdditionalKeyValues: nil)
+        return trnsf
+    }
+    
+    func relationshipSingleObjectTransform(withAdditionalKeyValues: [String:Any]? = nil) -> TransformOf<T, [String: Any]> {
+        return TransformOf<T, [String: Any]>(
+            fromJSON: { (value: [String: Any]?) -> T? in
+                var jsonObject = value
+                if let adds = withAdditionalKeyValues {
+                    jsonObject = value?.merging(adds) { (_, new) in new }
+                }
+                return Mapper<T>(context: self.context).map(JSONObject: jsonObject)
+        },
+            toJSON: { (value: T?) -> [String: Any]? in
+                return value?.toJSON()
         })
     }
 }

@@ -10,6 +10,192 @@
 		192E31D0206B8A01007C66AB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E31CF206B8A01007C66AB /* Utils.swift */; };
 		192E31D2206B8D44007C66AB /* CustomNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E31D1206B8D44007C66AB /* CustomNumberFormatter.swift */; };
 		192E31D5206B9009007C66AB /* TeamPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E31D4206B9009007C66AB /* TeamPlayVC.swift */; };
+		192E31DA206BAA7B007C66AB /* WeaponCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E31D9206BAA7B007C66AB /* WeaponCollectionViewCell.swift */; };
+		192E31DC206BAA87007C66AB /* WeaponCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 192E31DB206BAA87007C66AB /* WeaponCollectionViewCell.xib */; };
+		192E33F9206BACF9007C66AB /* l85a2.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3345206BACF8007C66AB /* l85a2.png */; };
+		192E33FA206BACF9007C66AB /* knife_precisionknife.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3346206BACF8007C66AB /* knife_precisionknife.png */; };
+		192E33FB206BACF9007C66AB /* saddlegun.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3347206BACF8007C66AB /* saddlegun.png */; };
+		192E33FC206BACF9007C66AB /* machete.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3348206BACF8007C66AB /* machete.png */; };
+		192E33FD206BACF9007C66AB /* cz805.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3349206BACF8007C66AB /* cz805.png */; };
+		192E33FE206BACF9007C66AB /* galil_ace52cqb.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E334A206BACF8007C66AB /* galil_ace52cqb.png */; };
+		192E33FF206BACF9007C66AB /* m200_srr61.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E334B206BACF8007C66AB /* m200_srr61.png */; };
+		192E3400206BACF9007C66AB /* pp2000.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E334C206BACF8007C66AB /* pp2000.png */; };
+		192E3401206BACF9007C66AB /* an94.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E334D206BACF8007C66AB /* an94.png */; };
+		192E3402206BACF9007C66AB /* rpk74.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E334E206BACF8007C66AB /* rpk74.png */; };
+		192E3403206BACF9007C66AB /* mpx.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E334F206BACF8007C66AB /* mpx.png */; };
+		192E3404206BACF9007C66AB /* eodbot.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3350206BACF8007C66AB /* eodbot.png */; };
+		192E3405206BACF9007C66AB /* ump.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3351206BACF8007C66AB /* ump.png */; };
+		192E3406206BACF9007C66AB /* sr338.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3352206BACF8007C66AB /* sr338.png */; };
+		192E3407206BACF9007C66AB /* aku12.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3353206BACF8007C66AB /* aku12.png */; };
+		192E3408206BACF9007C66AB /* rpg7.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3354206BACF8007C66AB /* rpg7.png */; };
+		192E3409206BACF9007C66AB /* m82a3_far.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3355206BACF8007C66AB /* m82a3_far.png */; };
+		192E340A206BACF9007C66AB /* shield.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3356206BACF8007C66AB /* shield.png */; };
+		192E340B206BACF9007C66AB /* scarhsv.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3357206BACF8007C66AB /* scarhsv.png */; };
+		192E340C206BACF9007C66AB /* rfb.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3358206BACF8007C66AB /* rfb.png */; };
+		192E340D206BACF9007C66AB /* mtar21.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3359206BACF8007C66AB /* mtar21.png */; };
+		192E340E206BACF9007C66AB /* v40_mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E335A206BACF8007C66AB /* v40_mini.png */; };
+		192E340F206BACF9007C66AB /* m320_sg.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E335B206BACF8007C66AB /* m320_sg.png */; };
+		192E3410206BACF9007C66AB /* f2000.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E335C206BACF8007C66AB /* f2000.png */; };
+		192E3411206BACF9007C66AB /* aamine.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E335D206BACF8007C66AB /* aamine.png */; };
+		192E3412206BACF9007C66AB /* m84_flashbang.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E335E206BACF8007C66AB /* m84_flashbang.png */; };
+		192E3413206BACF9007C66AB /* mg4.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E335F206BACF8007C66AB /* mg4.png */; };
+		192E3414206BACF9007C66AB /* type88.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3360206BACF8007C66AB /* type88.png */; };
+		192E3415206BACF9007C66AB /* m39.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3361206BACF8007C66AB /* m39.png */; };
+		192E3416206BACF9007C66AB /* m26mass.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3362206BACF8007C66AB /* m26mass.png */; };
+		192E3417206BACF9007C66AB /* knife_sealknife_lines.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3363206BACF8007C66AB /* knife_sealknife_lines.png */; };
+		192E3418206BACF9007C66AB /* galil_ace21cqb.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3364206BACF8007C66AB /* galil_ace21cqb.png */; };
+		192E3419206BACF9007C66AB /* m34_incendiary.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3365206BACF8007C66AB /* m34_incendiary.png */; };
+		192E341A206BACF9007C66AB /* m26mass_flc.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3366206BACF8007C66AB /* m26mass_flc.png */; };
+		192E341B206BACF9007C66AB /* knife_bootknife_lines.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3367206BACF8007C66AB /* knife_bootknife_lines.png */; };
+		192E341C206BACF9007C66AB /* m82a3_med.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3368206BACF8007C66AB /* m82a3_med.png */; };
+		192E341D206BACF9007C66AB /* knife_bootknife.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3369206BACF8007C66AB /* knife_bootknife.png */; };
+		192E341E206BACF9007C66AB /* a91.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E336A206BACF8007C66AB /* a91.png */; };
+		192E341F206BACF9007C66AB /* xm25_flc.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E336B206BACF8007C66AB /* xm25_flc.png */; };
+		192E3420206BACF9007C66AB /* knife_sealknife.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E336C206BACF8007C66AB /* knife_sealknife.png */; };
+		192E3421206BACF9007C66AB /* sar21.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E336D206BACF8007C66AB /* sar21.png */; };
+		192E3422206BACF9007C66AB /* ucav.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E336E206BACF8007C66AB /* ucav.png */; };
+		192E3423206BACF9007C66AB /* qbb95.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E336F206BACF8007C66AB /* qbb95.png */; };
+		192E3424206BACF9007C66AB /* js2.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3370206BACF8007C66AB /* js2.png */; };
+		192E3425206BACF9007C66AB /* knife_precisionknife_lines.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3371206BACF8007C66AB /* knife_precisionknife_lines.png */; };
+		192E3426206BACF9007C66AB /* lsat.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3372206BACF8007C66AB /* lsat.png */; };
+		192E3427206BACF9007C66AB /* knife_2142knife_lines.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3373206BACF8007C66AB /* knife_2142knife_lines.png */; };
+		192E3428206BACF9007C66AB /* m240.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3374206BACF8007C66AB /* m240.png */; };
+		192E3429206BACF9007C66AB /* m1911.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3375206BACF8007C66AB /* m1911.png */; };
+		192E342A206BACF9007C66AB /* sw40.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3376206BACF8007C66AB /* sw40.png */; };
+		192E342B206BACF9007C66AB /* m136.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3377206BACF8007C66AB /* m136.png */; };
+		192E342C206BACF9007C66AB /* remington870.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3378206BACF8007C66AB /* remington870.png */; };
+		192E342D206BACF9007C66AB /* xm25_smk.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3379206BACF8007C66AB /* xm25_smk.png */; };
+		192E342E206BACF9007C66AB /* type95b1.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E337A206BACF8007C66AB /* type95b1.png */; };
+		192E342F206BACF9007C66AB /* m320.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E337B206BACF8007C66AB /* m320.png */; };
+		192E3430206BACF9007C66AB /* cz75.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E337C206BACF8007C66AB /* cz75.png */; };
+		192E3431206BACF9007C66AB /* l86a1.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E337D206BACF8007C66AB /* l86a1.png */; };
+		192E3432206BACF9007C66AB /* dbv12.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E337E206BACF8007C66AB /* dbv12.png */; };
+		192E3433206BACF9007C66AB /* aws.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E337F206BACF8007C66AB /* aws.png */; };
+		192E3434206BACF9007C66AB /* rgo_impact.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3380206BACF8007C66AB /* rgo_impact.png */; };
+		192E3435206BACF9007C66AB /* mx4.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3381206BACF8007C66AB /* mx4.png */; };
+		192E3436206BACF9007C66AB /* knife_neckknife.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3382206BACF8007C66AB /* knife_neckknife.png */; };
+		192E3437206BACF9007C66AB /* mk153_smaw.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3383206BACF8007C66AB /* mk153_smaw.png */; };
+		192E3438206BACF9007C66AB /* hawk12g.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3384206BACF8007C66AB /* hawk12g.png */; };
+		192E3439206BACF9007C66AB /* fgm148_javelin.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3385206BACF8007C66AB /* fgm148_javelin.png */; };
+		192E343A206BACF9007C66AB /* cslr4.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3386206BACF8007C66AB /* cslr4.png */; };
+		192E343B206BACF9007C66AB /* spas12.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3387206BACF8007C66AB /* spas12.png */; };
+		192E343C206BACF9007C66AB /* sr2.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3388206BACF8007C66AB /* sr2.png */; };
+		192E343D206BACF9007C66AB /* glock18.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3389206BACF8007C66AB /* glock18.png */; };
+		192E343E206BACF9007C66AB /* amr_med.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E338A206BACF8007C66AB /* amr_med.png */; };
+		192E343F206BACF9007C66AB /* sks.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E338B206BACF8007C66AB /* sks.png */; };
+		192E3440206BACF9007C66AB /* m2_slam.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E338C206BACF8007C66AB /* m2_slam.png */; };
+		192E3441206BACF9007C66AB /* m224_mortar.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E338D206BACF8007C66AB /* m224_mortar.png */; };
+		192E3442206BACF9007C66AB /* qbu88.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E338E206BACF8007C66AB /* qbu88.png */; };
+		192E3443206BACF9007C66AB /* shorty12g.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E338F206BACF8007C66AB /* shorty12g.png */; };
+		192E3444206BACF9007C66AB /* amr_far.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3390206BACF8007C66AB /* amr_far.png */; };
+		192E3445206BACF9007C66AB /* at_mine.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3391206BACF8007C66AB /* at_mine.png */; };
+		192E3446206BACF9007C66AB /* m40a5.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3392206BACF8007C66AB /* m40a5.png */; };
+		192E3447206BACF9007C66AB /* m26mass_frg.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3393206BACF8007C66AB /* m26mass_frg.png */; };
+		192E3448206BACF9007C66AB /* ak5c.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3394206BACF8007C66AB /* ak5c.png */; };
+		192E3449206BACF9007C66AB /* rpk12.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3395206BACF8007C66AB /* rpk12.png */; };
+		192E344A206BACF9007C66AB /* acwr.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3396206BACF8007C66AB /* acwr.png */; };
+		192E344B206BACF9007C66AB /* utas.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3397206BACF8007C66AB /* utas.png */; };
+		192E344C206BACF9007C66AB /* knife_neckknife_lines.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3398206BACF8007C66AB /* knife_neckknife_lines.png */; };
+		192E344D206BACF9007C66AB /* scoutelite.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E3399206BACF8007C66AB /* scoutelite.png */; };
+		192E344E206BACF9007C66AB /* srs_338recon.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E339A206BACF8007C66AB /* srs_338recon.png */; };
+		192E344F206BACF9007C66AB /* m67_grenade.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E339B206BACF8007C66AB /* m67_grenade.png */; };
+		192E3450206BACF9007C66AB /* scarh.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E339C206BACF8007C66AB /* scarh.png */; };
+		192E3451206BACF9007C66AB /* mp412rex.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E339D206BACF8007C66AB /* mp412rex.png */; };
+		192E3452206BACF9007C66AB /* sh.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E339E206BACF8007C66AB /* sh.png */; };
+		192E3453206BACF9007C66AB /* ultimax.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E339F206BACF8007C66AB /* ultimax.png */; };
+		192E3454206BACF9007C66AB /* qbz951.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33A0206BACF8007C66AB /* qbz951.png */; };
+		192E3455206BACF9007C66AB /* hvm_starstreak.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33A1206BACF8007C66AB /* hvm_starstreak.png */; };
+		192E3456206BACF9007C66AB /* m249.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33A2206BACF8007C66AB /* m249.png */; };
+		192E3457206BACF9007C66AB /* knife_tactical2knife.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33A3206BACF8007C66AB /* knife_tactical2knife.png */; };
+		192E3458206BACF9007C66AB /* knife_combat_acb90.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33A4206BACF8007C66AB /* knife_combat_acb90.png */; };
+		192E3459206BACF9007C66AB /* p90.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33A5206BACF8007C66AB /* p90.png */; };
+		192E345A206BACF9007C66AB /* pecheneg.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33A6206BACF8007C66AB /* pecheneg.png */; };
+		192E345B206BACF9007C66AB /* gol.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33A7206BACF8007C66AB /* gol.png */; };
+		192E345C206BACF9007C66AB /* jng90.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33A8206BACF8007C66AB /* jng90.png */; };
+		192E345D206BACF9007C66AB /* fyjs.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33A9206BACF8007C66AB /* fyjs.png */; };
+		192E345E206BACF9007C66AB /* amr_cqb.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33AA206BACF8007C66AB /* amr_cqb.png */; };
+		192E345F206BACF9007C66AB /* saiga12.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33AB206BACF8007C66AB /* saiga12.png */; };
+		192E3460206BACF9007C66AB /* m93r.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33AC206BACF8007C66AB /* m93r.png */; };
+		192E3461206BACF9007C66AB /* claymore.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33AD206BACF8007C66AB /* claymore.png */; };
+		192E3462206BACF9007C66AB /* deserteagle.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33AE206BACF8007C66AB /* deserteagle.png */; };
+		192E3463206BACF9007C66AB /* galil_ace53sv.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33AF206BACF8007C66AB /* galil_ace53sv.png */; };
+		192E3464206BACF9007C66AB /* knife_diverknife.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33B0206BACF8007C66AB /* knife_diverknife.png */; };
+		192E3465206BACF9007C66AB /* m18_smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33B1206BACF8007C66AB /* m18_smoke.png */; };
+		192E3466206BACF9007C66AB /* svd12.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33B2206BACF8007C66AB /* svd12.png */; };
+		192E3467206BACF9007C66AB /* g36c.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33B3206BACF8007C66AB /* g36c.png */; };
+		192E3468206BACF9007C66AB /* mbt_law.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33B4206BACF8007C66AB /* mbt_law.png */; };
+		192E3469206BACF9007C66AB /* m4a1.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33B5206BACF8007C66AB /* m4a1.png */; };
+		192E346A206BACF9007C66AB /* railgun.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33B6206BACF8007C66AB /* railgun.png */; };
+		192E346B206BACF9007C66AB /* xm25.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33B7206BACF8007C66AB /* xm25.png */; };
+		192E346C206BACF9007C66AB /* knife_survival.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33B8206BACF8007C66AB /* knife_survival.png */; };
+		192E346D206BACF9007C66AB /* m16a4.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33B9206BACF8007C66AB /* m16a4.png */; };
+		192E346E206BACF9007C66AB /* fim92_stinger.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33BA206BACF8007C66AB /* fim92_stinger.png */; };
+		192E346F206BACF9007C66AB /* c100.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33BB206BACF8007C66AB /* c100.png */; };
+		192E3470206BACF9007C66AB /* taurus44.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33BC206BACF8007C66AB /* taurus44.png */; };
+		192E3471206BACF9007C66AB /* knife_tactical2knife_lines.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33BD206BACF8007C66AB /* knife_tactical2knife_lines.png */; };
+		192E3472206BACF9007C66AB /* m26mass_sg.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33BE206BACF8007C66AB /* m26mass_sg.png */; };
+		192E3473206BACF9007C66AB /* m320_3gl.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33BF206BACF8007C66AB /* m320_3gl.png */; };
+		192E3474206BACF9007C66AB /* fgm172_sraw.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33C0206BACF8007C66AB /* fgm172_sraw.png */; };
+		192E3475206BACF9007C66AB /* sa18_igla.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33C1206BACF8007C66AB /* sa18_igla.png */; };
+		192E3476206BACF9007C66AB /* knife_diverknife_lines.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33C2206BACF8007C66AB /* knife_diverknife_lines.png */; };
+		192E3477206BACF9007C66AB /* knife_trench.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33C3206BACF8007C66AB /* knife_trench.png */; };
+		192E3478206BACF9007C66AB /* mgl.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33C4206BACF8007C66AB /* mgl.png */; };
+		192E3479206BACF9007C66AB /* l96a1.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33C5206BACF8007C66AB /* l96a1.png */; };
+		192E347A206BACF9007C66AB /* steyraug.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33C6206BACF8007C66AB /* steyraug.png */; };
+		192E347B206BACF9007C66AB /* knife_2142knife.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33C7206BACF8007C66AB /* knife_2142knife.png */; };
+		192E347C206BACF9007C66AB /* defib.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33C8206BACF8007C66AB /* defib.png */; };
+		192E347D206BACF9007C66AB /* knife.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33C9206BACF8007C66AB /* knife.png */; };
+		192E347E206BACF9007C66AB /* galil_ace23.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33CA206BACF8007C66AB /* galil_ace23.png */; };
+		192E347F206BACF9007C66AB /* ak12.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33CB206BACF8007C66AB /* ak12.png */; };
+		192E3480206BACF9007C66AB /* fn57.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33CC206BACF8007C66AB /* fn57.png */; };
+		192E3481206BACF9007C66AB /* knife_tanto.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33CD206BACF8007C66AB /* knife_tanto.png */; };
+		192E3482206BACF9007C66AB /* knife_improvised.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33CE206BACF8007C66AB /* knife_improvised.png */; };
+		192E3483206BACF9007C66AB /* m82a3_cqb.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33CF206BACF8007C66AB /* m82a3_cqb.png */; };
+		192E3484206BACF9007C66AB /* m60e4.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33D0206BACF8007C66AB /* m60e4.png */; };
+		192E3485206BACF9007C66AB /* m9.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33D1206BACF8007C66AB /* m9.png */; };
+		192E3486206BACF9007C66AB /* hk45c.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33D2206BACF8007C66AB /* hk45c.png */; };
+		192E3487206BACF9007C66AB /* qbs09.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33D3206BACF8007C66AB /* qbs09.png */; };
+		192E3488206BACF9007C66AB /* usas12_nv.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33D4206BACF8007C66AB /* usas12_nv.png */; };
+		192E3489206BACF9007C66AB /* ump9.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33D5206BACF8007C66AB /* ump9.png */; };
+		192E348A206BACF9007C66AB /* sg553lb.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33D6206BACF8007C66AB /* sg553lb.png */; };
+		192E348B206BACF9007C66AB /* groza4.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33D7206BACF8007C66AB /* groza4.png */; };
+		192E348C206BACF9007C66AB /* p226.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33D8206BACF8007C66AB /* p226.png */; };
+		192E348D206BACF9007C66AB /* aek971.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33D9206BACF8007C66AB /* aek971.png */; };
+		192E348E206BACF9007C66AB /* cbjms.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33DA206BACF8007C66AB /* cbjms.png */; };
+		192E348F206BACF9007C66AB /* handflare.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33DB206BACF8007C66AB /* handflare.png */; };
+		192E3490206BACF9007C66AB /* unica6.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33DC206BACF8007C66AB /* unica6.png */; };
+		192E3491206BACF9007C66AB /* mk11.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33DD206BACF8007C66AB /* mk11.png */; };
+		192E3492206BACF9007C66AB /* repairtool.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33DE206BACF8007C66AB /* repairtool.png */; };
+		192E3493206BACF9007C66AB /* shank.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33DF206BACF8007C66AB /* shank.png */; };
+		192E3494206BACF9007C66AB /* knife_carbon.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33E0206BACF8007C66AB /* knife_carbon.png */; };
+		192E3495206BACF9007C66AB /* knife_bowie.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33E1206BACF8007C66AB /* knife_bowie.png */; };
+		192E3496206BACF9007C66AB /* sv98.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33E2206BACF8007C66AB /* sv98.png */; };
+		192E3497206BACF9007C66AB /* knife_weaver.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33E3206BACF8007C66AB /* knife_weaver.png */; };
+		192E3498206BACF9007C66AB /* mp443_grach.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33E4206BACF8007C66AB /* mp443_grach.png */; };
+		192E3499206BACF9007C66AB /* usas12_bp.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33E5206BACF8007C66AB /* usas12_bp.png */; };
+		192E349A206BACF9007C66AB /* asval.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33E6206BACF8007C66AB /* asval.png */; };
+		192E349B206BACF9007C66AB /* famas.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33E7206BACF8007C66AB /* famas.png */; };
+		192E349C206BACF9007C66AB /* groza1.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33E8206BACF8007C66AB /* groza1.png */; };
+		192E349D206BACF9007C66AB /* m320_smk.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33E9206BACF8007C66AB /* m320_smk.png */; };
+		192E349E206BACF9007C66AB /* dao12.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33EA206BACF8007C66AB /* dao12.png */; };
+		192E349F206BACF9007C66AB /* m1014.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33EB206BACF8007C66AB /* m1014.png */; };
+		192E34A0206BACF9007C66AB /* m320_flash.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33EC206BACF8007C66AB /* m320_flash.png */; };
+		192E34A1206BACF9007C66AB /* m320_lvg.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33ED206BACF8007C66AB /* m320_lvg.png */; };
+		192E34A2206BACF9007C66AB /* cs5.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33EE206BACF8007C66AB /* cs5.png */; };
+		192E34A3206BACF9007C66AB /* c4.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33EF206BACF8007C66AB /* c4.png */; };
+		192E34A4206BACF9007C66AB /* m98b.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33F0206BACF8007C66AB /* m98b.png */; };
+		192E34A5206BACF9007C66AB /* qsz-92.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33F1206BACF8007C66AB /* qsz-92.png */; };
+		192E34A6206BACF9007C66AB /* m416.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33F2206BACF8007C66AB /* m416.png */; };
+		192E34A7206BACF9007C66AB /* scorpion.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33F3206BACF8007C66AB /* scorpion.png */; };
+		192E34A8206BACF9007C66AB /* magpulpdr.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33F4206BACF8007C66AB /* magpulpdr.png */; };
+		192E34A9206BACF9007C66AB /* bulldog.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33F5206BACF8007C66AB /* bulldog.png */; };
+		192E34AA206BACF9007C66AB /* mp7.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33F6206BACF8007C66AB /* mp7.png */; };
+		192E34AB206BACF9007C66AB /* ar160.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33F7206BACF8007C66AB /* ar160.png */; };
+		192E34AC206BACF9007C66AB /* knife_scout.png in Resources */ = {isa = PBXBuildFile; fileRef = 192E33F8206BACF8007C66AB /* knife_scout.png */; };
+		192E34AF206BADC3007C66AB /* MostWeaponKillsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E34AE206BADC3007C66AB /* MostWeaponKillsVC.swift */; };
+		192E34B1206BB20B007C66AB /* Weapon+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E34B0206BB20B007C66AB /* Weapon+Extension.swift */; };
+		192E34B3206BB217007C66AB /* WeaponStat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E34B2206BB217007C66AB /* WeaponStat+Extension.swift */; };
+		192E34B5206BBAF2007C66AB /* RankStats+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E34B4206BBAF2007C66AB /* RankStats+Extension.swift */; };
 		19A3413D2068EA3D0053D347 /* PlayersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A3413C2068EA3D0053D347 /* PlayersListVC.swift */; };
 		19A341422068F16A0053D347 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A341412068F16A0053D347 /* PlayerCell.swift */; };
 		19B2272E2069209700713815 /* agencyfb-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19B2272D2069209600713815 /* agencyfb-bold.ttf */; };
@@ -238,6 +424,192 @@
 		192E31CF206B8A01007C66AB /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		192E31D1206B8D44007C66AB /* CustomNumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberFormatter.swift; sourceTree = "<group>"; };
 		192E31D4206B9009007C66AB /* TeamPlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPlayVC.swift; sourceTree = "<group>"; };
+		192E31D9206BAA7B007C66AB /* WeaponCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponCollectionViewCell.swift; sourceTree = "<group>"; };
+		192E31DB206BAA87007C66AB /* WeaponCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeaponCollectionViewCell.xib; sourceTree = "<group>"; };
+		192E3345206BACF8007C66AB /* l85a2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = l85a2.png; sourceTree = "<group>"; };
+		192E3346206BACF8007C66AB /* knife_precisionknife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_precisionknife.png; sourceTree = "<group>"; };
+		192E3347206BACF8007C66AB /* saddlegun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saddlegun.png; sourceTree = "<group>"; };
+		192E3348206BACF8007C66AB /* machete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = machete.png; sourceTree = "<group>"; };
+		192E3349206BACF8007C66AB /* cz805.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cz805.png; sourceTree = "<group>"; };
+		192E334A206BACF8007C66AB /* galil_ace52cqb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = galil_ace52cqb.png; sourceTree = "<group>"; };
+		192E334B206BACF8007C66AB /* m200_srr61.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m200_srr61.png; sourceTree = "<group>"; };
+		192E334C206BACF8007C66AB /* pp2000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pp2000.png; sourceTree = "<group>"; };
+		192E334D206BACF8007C66AB /* an94.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = an94.png; sourceTree = "<group>"; };
+		192E334E206BACF8007C66AB /* rpk74.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rpk74.png; sourceTree = "<group>"; };
+		192E334F206BACF8007C66AB /* mpx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mpx.png; sourceTree = "<group>"; };
+		192E3350206BACF8007C66AB /* eodbot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eodbot.png; sourceTree = "<group>"; };
+		192E3351206BACF8007C66AB /* ump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ump.png; sourceTree = "<group>"; };
+		192E3352206BACF8007C66AB /* sr338.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sr338.png; sourceTree = "<group>"; };
+		192E3353206BACF8007C66AB /* aku12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aku12.png; sourceTree = "<group>"; };
+		192E3354206BACF8007C66AB /* rpg7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rpg7.png; sourceTree = "<group>"; };
+		192E3355206BACF8007C66AB /* m82a3_far.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m82a3_far.png; sourceTree = "<group>"; };
+		192E3356206BACF8007C66AB /* shield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shield.png; sourceTree = "<group>"; };
+		192E3357206BACF8007C66AB /* scarhsv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scarhsv.png; sourceTree = "<group>"; };
+		192E3358206BACF8007C66AB /* rfb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rfb.png; sourceTree = "<group>"; };
+		192E3359206BACF8007C66AB /* mtar21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mtar21.png; sourceTree = "<group>"; };
+		192E335A206BACF8007C66AB /* v40_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = v40_mini.png; sourceTree = "<group>"; };
+		192E335B206BACF8007C66AB /* m320_sg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m320_sg.png; sourceTree = "<group>"; };
+		192E335C206BACF8007C66AB /* f2000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f2000.png; sourceTree = "<group>"; };
+		192E335D206BACF8007C66AB /* aamine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aamine.png; sourceTree = "<group>"; };
+		192E335E206BACF8007C66AB /* m84_flashbang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m84_flashbang.png; sourceTree = "<group>"; };
+		192E335F206BACF8007C66AB /* mg4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg4.png; sourceTree = "<group>"; };
+		192E3360206BACF8007C66AB /* type88.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = type88.png; sourceTree = "<group>"; };
+		192E3361206BACF8007C66AB /* m39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m39.png; sourceTree = "<group>"; };
+		192E3362206BACF8007C66AB /* m26mass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m26mass.png; sourceTree = "<group>"; };
+		192E3363206BACF8007C66AB /* knife_sealknife_lines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_sealknife_lines.png; sourceTree = "<group>"; };
+		192E3364206BACF8007C66AB /* galil_ace21cqb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = galil_ace21cqb.png; sourceTree = "<group>"; };
+		192E3365206BACF8007C66AB /* m34_incendiary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m34_incendiary.png; sourceTree = "<group>"; };
+		192E3366206BACF8007C66AB /* m26mass_flc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m26mass_flc.png; sourceTree = "<group>"; };
+		192E3367206BACF8007C66AB /* knife_bootknife_lines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_bootknife_lines.png; sourceTree = "<group>"; };
+		192E3368206BACF8007C66AB /* m82a3_med.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m82a3_med.png; sourceTree = "<group>"; };
+		192E3369206BACF8007C66AB /* knife_bootknife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_bootknife.png; sourceTree = "<group>"; };
+		192E336A206BACF8007C66AB /* a91.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a91.png; sourceTree = "<group>"; };
+		192E336B206BACF8007C66AB /* xm25_flc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xm25_flc.png; sourceTree = "<group>"; };
+		192E336C206BACF8007C66AB /* knife_sealknife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_sealknife.png; sourceTree = "<group>"; };
+		192E336D206BACF8007C66AB /* sar21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sar21.png; sourceTree = "<group>"; };
+		192E336E206BACF8007C66AB /* ucav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ucav.png; sourceTree = "<group>"; };
+		192E336F206BACF8007C66AB /* qbb95.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qbb95.png; sourceTree = "<group>"; };
+		192E3370206BACF8007C66AB /* js2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = js2.png; sourceTree = "<group>"; };
+		192E3371206BACF8007C66AB /* knife_precisionknife_lines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_precisionknife_lines.png; sourceTree = "<group>"; };
+		192E3372206BACF8007C66AB /* lsat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lsat.png; sourceTree = "<group>"; };
+		192E3373206BACF8007C66AB /* knife_2142knife_lines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_2142knife_lines.png; sourceTree = "<group>"; };
+		192E3374206BACF8007C66AB /* m240.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m240.png; sourceTree = "<group>"; };
+		192E3375206BACF8007C66AB /* m1911.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m1911.png; sourceTree = "<group>"; };
+		192E3376206BACF8007C66AB /* sw40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sw40.png; sourceTree = "<group>"; };
+		192E3377206BACF8007C66AB /* m136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m136.png; sourceTree = "<group>"; };
+		192E3378206BACF8007C66AB /* remington870.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = remington870.png; sourceTree = "<group>"; };
+		192E3379206BACF8007C66AB /* xm25_smk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xm25_smk.png; sourceTree = "<group>"; };
+		192E337A206BACF8007C66AB /* type95b1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = type95b1.png; sourceTree = "<group>"; };
+		192E337B206BACF8007C66AB /* m320.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m320.png; sourceTree = "<group>"; };
+		192E337C206BACF8007C66AB /* cz75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cz75.png; sourceTree = "<group>"; };
+		192E337D206BACF8007C66AB /* l86a1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = l86a1.png; sourceTree = "<group>"; };
+		192E337E206BACF8007C66AB /* dbv12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dbv12.png; sourceTree = "<group>"; };
+		192E337F206BACF8007C66AB /* aws.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aws.png; sourceTree = "<group>"; };
+		192E3380206BACF8007C66AB /* rgo_impact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rgo_impact.png; sourceTree = "<group>"; };
+		192E3381206BACF8007C66AB /* mx4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mx4.png; sourceTree = "<group>"; };
+		192E3382206BACF8007C66AB /* knife_neckknife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_neckknife.png; sourceTree = "<group>"; };
+		192E3383206BACF8007C66AB /* mk153_smaw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mk153_smaw.png; sourceTree = "<group>"; };
+		192E3384206BACF8007C66AB /* hawk12g.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hawk12g.png; sourceTree = "<group>"; };
+		192E3385206BACF8007C66AB /* fgm148_javelin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fgm148_javelin.png; sourceTree = "<group>"; };
+		192E3386206BACF8007C66AB /* cslr4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cslr4.png; sourceTree = "<group>"; };
+		192E3387206BACF8007C66AB /* spas12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spas12.png; sourceTree = "<group>"; };
+		192E3388206BACF8007C66AB /* sr2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sr2.png; sourceTree = "<group>"; };
+		192E3389206BACF8007C66AB /* glock18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glock18.png; sourceTree = "<group>"; };
+		192E338A206BACF8007C66AB /* amr_med.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amr_med.png; sourceTree = "<group>"; };
+		192E338B206BACF8007C66AB /* sks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sks.png; sourceTree = "<group>"; };
+		192E338C206BACF8007C66AB /* m2_slam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m2_slam.png; sourceTree = "<group>"; };
+		192E338D206BACF8007C66AB /* m224_mortar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m224_mortar.png; sourceTree = "<group>"; };
+		192E338E206BACF8007C66AB /* qbu88.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qbu88.png; sourceTree = "<group>"; };
+		192E338F206BACF8007C66AB /* shorty12g.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shorty12g.png; sourceTree = "<group>"; };
+		192E3390206BACF8007C66AB /* amr_far.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amr_far.png; sourceTree = "<group>"; };
+		192E3391206BACF8007C66AB /* at_mine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = at_mine.png; sourceTree = "<group>"; };
+		192E3392206BACF8007C66AB /* m40a5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m40a5.png; sourceTree = "<group>"; };
+		192E3393206BACF8007C66AB /* m26mass_frg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m26mass_frg.png; sourceTree = "<group>"; };
+		192E3394206BACF8007C66AB /* ak5c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ak5c.png; sourceTree = "<group>"; };
+		192E3395206BACF8007C66AB /* rpk12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rpk12.png; sourceTree = "<group>"; };
+		192E3396206BACF8007C66AB /* acwr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = acwr.png; sourceTree = "<group>"; };
+		192E3397206BACF8007C66AB /* utas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = utas.png; sourceTree = "<group>"; };
+		192E3398206BACF8007C66AB /* knife_neckknife_lines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_neckknife_lines.png; sourceTree = "<group>"; };
+		192E3399206BACF8007C66AB /* scoutelite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scoutelite.png; sourceTree = "<group>"; };
+		192E339A206BACF8007C66AB /* srs_338recon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = srs_338recon.png; sourceTree = "<group>"; };
+		192E339B206BACF8007C66AB /* m67_grenade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m67_grenade.png; sourceTree = "<group>"; };
+		192E339C206BACF8007C66AB /* scarh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scarh.png; sourceTree = "<group>"; };
+		192E339D206BACF8007C66AB /* mp412rex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mp412rex.png; sourceTree = "<group>"; };
+		192E339E206BACF8007C66AB /* sh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sh.png; sourceTree = "<group>"; };
+		192E339F206BACF8007C66AB /* ultimax.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ultimax.png; sourceTree = "<group>"; };
+		192E33A0206BACF8007C66AB /* qbz951.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qbz951.png; sourceTree = "<group>"; };
+		192E33A1206BACF8007C66AB /* hvm_starstreak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hvm_starstreak.png; sourceTree = "<group>"; };
+		192E33A2206BACF8007C66AB /* m249.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m249.png; sourceTree = "<group>"; };
+		192E33A3206BACF8007C66AB /* knife_tactical2knife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_tactical2knife.png; sourceTree = "<group>"; };
+		192E33A4206BACF8007C66AB /* knife_combat_acb90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_combat_acb90.png; sourceTree = "<group>"; };
+		192E33A5206BACF8007C66AB /* p90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p90.png; sourceTree = "<group>"; };
+		192E33A6206BACF8007C66AB /* pecheneg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pecheneg.png; sourceTree = "<group>"; };
+		192E33A7206BACF8007C66AB /* gol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gol.png; sourceTree = "<group>"; };
+		192E33A8206BACF8007C66AB /* jng90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jng90.png; sourceTree = "<group>"; };
+		192E33A9206BACF8007C66AB /* fyjs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fyjs.png; sourceTree = "<group>"; };
+		192E33AA206BACF8007C66AB /* amr_cqb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amr_cqb.png; sourceTree = "<group>"; };
+		192E33AB206BACF8007C66AB /* saiga12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saiga12.png; sourceTree = "<group>"; };
+		192E33AC206BACF8007C66AB /* m93r.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m93r.png; sourceTree = "<group>"; };
+		192E33AD206BACF8007C66AB /* claymore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = claymore.png; sourceTree = "<group>"; };
+		192E33AE206BACF8007C66AB /* deserteagle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deserteagle.png; sourceTree = "<group>"; };
+		192E33AF206BACF8007C66AB /* galil_ace53sv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = galil_ace53sv.png; sourceTree = "<group>"; };
+		192E33B0206BACF8007C66AB /* knife_diverknife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_diverknife.png; sourceTree = "<group>"; };
+		192E33B1206BACF8007C66AB /* m18_smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m18_smoke.png; sourceTree = "<group>"; };
+		192E33B2206BACF8007C66AB /* svd12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = svd12.png; sourceTree = "<group>"; };
+		192E33B3206BACF8007C66AB /* g36c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = g36c.png; sourceTree = "<group>"; };
+		192E33B4206BACF8007C66AB /* mbt_law.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mbt_law.png; sourceTree = "<group>"; };
+		192E33B5206BACF8007C66AB /* m4a1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m4a1.png; sourceTree = "<group>"; };
+		192E33B6206BACF8007C66AB /* railgun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = railgun.png; sourceTree = "<group>"; };
+		192E33B7206BACF8007C66AB /* xm25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xm25.png; sourceTree = "<group>"; };
+		192E33B8206BACF8007C66AB /* knife_survival.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_survival.png; sourceTree = "<group>"; };
+		192E33B9206BACF8007C66AB /* m16a4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m16a4.png; sourceTree = "<group>"; };
+		192E33BA206BACF8007C66AB /* fim92_stinger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fim92_stinger.png; sourceTree = "<group>"; };
+		192E33BB206BACF8007C66AB /* c100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = c100.png; sourceTree = "<group>"; };
+		192E33BC206BACF8007C66AB /* taurus44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taurus44.png; sourceTree = "<group>"; };
+		192E33BD206BACF8007C66AB /* knife_tactical2knife_lines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_tactical2knife_lines.png; sourceTree = "<group>"; };
+		192E33BE206BACF8007C66AB /* m26mass_sg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m26mass_sg.png; sourceTree = "<group>"; };
+		192E33BF206BACF8007C66AB /* m320_3gl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m320_3gl.png; sourceTree = "<group>"; };
+		192E33C0206BACF8007C66AB /* fgm172_sraw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fgm172_sraw.png; sourceTree = "<group>"; };
+		192E33C1206BACF8007C66AB /* sa18_igla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sa18_igla.png; sourceTree = "<group>"; };
+		192E33C2206BACF8007C66AB /* knife_diverknife_lines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_diverknife_lines.png; sourceTree = "<group>"; };
+		192E33C3206BACF8007C66AB /* knife_trench.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_trench.png; sourceTree = "<group>"; };
+		192E33C4206BACF8007C66AB /* mgl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mgl.png; sourceTree = "<group>"; };
+		192E33C5206BACF8007C66AB /* l96a1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = l96a1.png; sourceTree = "<group>"; };
+		192E33C6206BACF8007C66AB /* steyraug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = steyraug.png; sourceTree = "<group>"; };
+		192E33C7206BACF8007C66AB /* knife_2142knife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_2142knife.png; sourceTree = "<group>"; };
+		192E33C8206BACF8007C66AB /* defib.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defib.png; sourceTree = "<group>"; };
+		192E33C9206BACF8007C66AB /* knife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife.png; sourceTree = "<group>"; };
+		192E33CA206BACF8007C66AB /* galil_ace23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = galil_ace23.png; sourceTree = "<group>"; };
+		192E33CB206BACF8007C66AB /* ak12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ak12.png; sourceTree = "<group>"; };
+		192E33CC206BACF8007C66AB /* fn57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fn57.png; sourceTree = "<group>"; };
+		192E33CD206BACF8007C66AB /* knife_tanto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_tanto.png; sourceTree = "<group>"; };
+		192E33CE206BACF8007C66AB /* knife_improvised.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_improvised.png; sourceTree = "<group>"; };
+		192E33CF206BACF8007C66AB /* m82a3_cqb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m82a3_cqb.png; sourceTree = "<group>"; };
+		192E33D0206BACF8007C66AB /* m60e4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m60e4.png; sourceTree = "<group>"; };
+		192E33D1206BACF8007C66AB /* m9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m9.png; sourceTree = "<group>"; };
+		192E33D2206BACF8007C66AB /* hk45c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hk45c.png; sourceTree = "<group>"; };
+		192E33D3206BACF8007C66AB /* qbs09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qbs09.png; sourceTree = "<group>"; };
+		192E33D4206BACF8007C66AB /* usas12_nv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usas12_nv.png; sourceTree = "<group>"; };
+		192E33D5206BACF8007C66AB /* ump9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ump9.png; sourceTree = "<group>"; };
+		192E33D6206BACF8007C66AB /* sg553lb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sg553lb.png; sourceTree = "<group>"; };
+		192E33D7206BACF8007C66AB /* groza4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = groza4.png; sourceTree = "<group>"; };
+		192E33D8206BACF8007C66AB /* p226.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p226.png; sourceTree = "<group>"; };
+		192E33D9206BACF8007C66AB /* aek971.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aek971.png; sourceTree = "<group>"; };
+		192E33DA206BACF8007C66AB /* cbjms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cbjms.png; sourceTree = "<group>"; };
+		192E33DB206BACF8007C66AB /* handflare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = handflare.png; sourceTree = "<group>"; };
+		192E33DC206BACF8007C66AB /* unica6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unica6.png; sourceTree = "<group>"; };
+		192E33DD206BACF8007C66AB /* mk11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mk11.png; sourceTree = "<group>"; };
+		192E33DE206BACF8007C66AB /* repairtool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = repairtool.png; sourceTree = "<group>"; };
+		192E33DF206BACF8007C66AB /* shank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shank.png; sourceTree = "<group>"; };
+		192E33E0206BACF8007C66AB /* knife_carbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_carbon.png; sourceTree = "<group>"; };
+		192E33E1206BACF8007C66AB /* knife_bowie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_bowie.png; sourceTree = "<group>"; };
+		192E33E2206BACF8007C66AB /* sv98.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sv98.png; sourceTree = "<group>"; };
+		192E33E3206BACF8007C66AB /* knife_weaver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_weaver.png; sourceTree = "<group>"; };
+		192E33E4206BACF8007C66AB /* mp443_grach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mp443_grach.png; sourceTree = "<group>"; };
+		192E33E5206BACF8007C66AB /* usas12_bp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usas12_bp.png; sourceTree = "<group>"; };
+		192E33E6206BACF8007C66AB /* asval.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asval.png; sourceTree = "<group>"; };
+		192E33E7206BACF8007C66AB /* famas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = famas.png; sourceTree = "<group>"; };
+		192E33E8206BACF8007C66AB /* groza1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = groza1.png; sourceTree = "<group>"; };
+		192E33E9206BACF8007C66AB /* m320_smk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m320_smk.png; sourceTree = "<group>"; };
+		192E33EA206BACF8007C66AB /* dao12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dao12.png; sourceTree = "<group>"; };
+		192E33EB206BACF8007C66AB /* m1014.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m1014.png; sourceTree = "<group>"; };
+		192E33EC206BACF8007C66AB /* m320_flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m320_flash.png; sourceTree = "<group>"; };
+		192E33ED206BACF8007C66AB /* m320_lvg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m320_lvg.png; sourceTree = "<group>"; };
+		192E33EE206BACF8007C66AB /* cs5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cs5.png; sourceTree = "<group>"; };
+		192E33EF206BACF8007C66AB /* c4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = c4.png; sourceTree = "<group>"; };
+		192E33F0206BACF8007C66AB /* m98b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m98b.png; sourceTree = "<group>"; };
+		192E33F1206BACF8007C66AB /* qsz-92.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qsz-92.png"; sourceTree = "<group>"; };
+		192E33F2206BACF8007C66AB /* m416.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m416.png; sourceTree = "<group>"; };
+		192E33F3206BACF8007C66AB /* scorpion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scorpion.png; sourceTree = "<group>"; };
+		192E33F4206BACF8007C66AB /* magpulpdr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magpulpdr.png; sourceTree = "<group>"; };
+		192E33F5206BACF8007C66AB /* bulldog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulldog.png; sourceTree = "<group>"; };
+		192E33F6206BACF8007C66AB /* mp7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mp7.png; sourceTree = "<group>"; };
+		192E33F7206BACF8007C66AB /* ar160.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ar160.png; sourceTree = "<group>"; };
+		192E33F8206BACF8007C66AB /* knife_scout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife_scout.png; sourceTree = "<group>"; };
+		192E34AE206BADC3007C66AB /* MostWeaponKillsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostWeaponKillsVC.swift; sourceTree = "<group>"; };
+		192E34B0206BB20B007C66AB /* Weapon+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weapon+Extension.swift"; sourceTree = "<group>"; };
+		192E34B2206BB217007C66AB /* WeaponStat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeaponStat+Extension.swift"; sourceTree = "<group>"; };
+		192E34B4206BBAF2007C66AB /* RankStats+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RankStats+Extension.swift"; sourceTree = "<group>"; };
 		19A3413C2068EA3D0053D347 /* PlayersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersListVC.swift; sourceTree = "<group>"; };
 		19A341412068F16A0053D347 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		19B2272D2069209600713815 /* agencyfb-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "agencyfb-bold.ttf"; sourceTree = "<group>"; };
@@ -499,6 +871,226 @@
 			path = TeamPlayVC;
 			sourceTree = "<group>";
 		};
+		192E31D6206BAA46007C66AB /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				192E31D7206BAA50007C66AB /* Cell */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		192E31D7206BAA50007C66AB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				192E31D8206BAA5A007C66AB /* CollectionViewCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		192E31D8206BAA5A007C66AB /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				192E31D9206BAA7B007C66AB /* WeaponCollectionViewCell.swift */,
+				192E31DB206BAA87007C66AB /* WeaponCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		192E3344206BACF8007C66AB /* weapons_lineart */ = {
+			isa = PBXGroup;
+			children = (
+				192E3345206BACF8007C66AB /* l85a2.png */,
+				192E3346206BACF8007C66AB /* knife_precisionknife.png */,
+				192E3347206BACF8007C66AB /* saddlegun.png */,
+				192E3348206BACF8007C66AB /* machete.png */,
+				192E3349206BACF8007C66AB /* cz805.png */,
+				192E334A206BACF8007C66AB /* galil_ace52cqb.png */,
+				192E334B206BACF8007C66AB /* m200_srr61.png */,
+				192E334C206BACF8007C66AB /* pp2000.png */,
+				192E334D206BACF8007C66AB /* an94.png */,
+				192E334E206BACF8007C66AB /* rpk74.png */,
+				192E334F206BACF8007C66AB /* mpx.png */,
+				192E3350206BACF8007C66AB /* eodbot.png */,
+				192E3351206BACF8007C66AB /* ump.png */,
+				192E3352206BACF8007C66AB /* sr338.png */,
+				192E3353206BACF8007C66AB /* aku12.png */,
+				192E3354206BACF8007C66AB /* rpg7.png */,
+				192E3355206BACF8007C66AB /* m82a3_far.png */,
+				192E3356206BACF8007C66AB /* shield.png */,
+				192E3357206BACF8007C66AB /* scarhsv.png */,
+				192E3358206BACF8007C66AB /* rfb.png */,
+				192E3359206BACF8007C66AB /* mtar21.png */,
+				192E335A206BACF8007C66AB /* v40_mini.png */,
+				192E335B206BACF8007C66AB /* m320_sg.png */,
+				192E335C206BACF8007C66AB /* f2000.png */,
+				192E335D206BACF8007C66AB /* aamine.png */,
+				192E335E206BACF8007C66AB /* m84_flashbang.png */,
+				192E335F206BACF8007C66AB /* mg4.png */,
+				192E3360206BACF8007C66AB /* type88.png */,
+				192E3361206BACF8007C66AB /* m39.png */,
+				192E3362206BACF8007C66AB /* m26mass.png */,
+				192E3363206BACF8007C66AB /* knife_sealknife_lines.png */,
+				192E3364206BACF8007C66AB /* galil_ace21cqb.png */,
+				192E3365206BACF8007C66AB /* m34_incendiary.png */,
+				192E3366206BACF8007C66AB /* m26mass_flc.png */,
+				192E3367206BACF8007C66AB /* knife_bootknife_lines.png */,
+				192E3368206BACF8007C66AB /* m82a3_med.png */,
+				192E3369206BACF8007C66AB /* knife_bootknife.png */,
+				192E336A206BACF8007C66AB /* a91.png */,
+				192E336B206BACF8007C66AB /* xm25_flc.png */,
+				192E336C206BACF8007C66AB /* knife_sealknife.png */,
+				192E336D206BACF8007C66AB /* sar21.png */,
+				192E336E206BACF8007C66AB /* ucav.png */,
+				192E336F206BACF8007C66AB /* qbb95.png */,
+				192E3370206BACF8007C66AB /* js2.png */,
+				192E3371206BACF8007C66AB /* knife_precisionknife_lines.png */,
+				192E3372206BACF8007C66AB /* lsat.png */,
+				192E3373206BACF8007C66AB /* knife_2142knife_lines.png */,
+				192E3374206BACF8007C66AB /* m240.png */,
+				192E3375206BACF8007C66AB /* m1911.png */,
+				192E3376206BACF8007C66AB /* sw40.png */,
+				192E3377206BACF8007C66AB /* m136.png */,
+				192E3378206BACF8007C66AB /* remington870.png */,
+				192E3379206BACF8007C66AB /* xm25_smk.png */,
+				192E337A206BACF8007C66AB /* type95b1.png */,
+				192E337B206BACF8007C66AB /* m320.png */,
+				192E337C206BACF8007C66AB /* cz75.png */,
+				192E337D206BACF8007C66AB /* l86a1.png */,
+				192E337E206BACF8007C66AB /* dbv12.png */,
+				192E337F206BACF8007C66AB /* aws.png */,
+				192E3380206BACF8007C66AB /* rgo_impact.png */,
+				192E3381206BACF8007C66AB /* mx4.png */,
+				192E3382206BACF8007C66AB /* knife_neckknife.png */,
+				192E3383206BACF8007C66AB /* mk153_smaw.png */,
+				192E3384206BACF8007C66AB /* hawk12g.png */,
+				192E3385206BACF8007C66AB /* fgm148_javelin.png */,
+				192E3386206BACF8007C66AB /* cslr4.png */,
+				192E3387206BACF8007C66AB /* spas12.png */,
+				192E3388206BACF8007C66AB /* sr2.png */,
+				192E3389206BACF8007C66AB /* glock18.png */,
+				192E338A206BACF8007C66AB /* amr_med.png */,
+				192E338B206BACF8007C66AB /* sks.png */,
+				192E338C206BACF8007C66AB /* m2_slam.png */,
+				192E338D206BACF8007C66AB /* m224_mortar.png */,
+				192E338E206BACF8007C66AB /* qbu88.png */,
+				192E338F206BACF8007C66AB /* shorty12g.png */,
+				192E3390206BACF8007C66AB /* amr_far.png */,
+				192E3391206BACF8007C66AB /* at_mine.png */,
+				192E3392206BACF8007C66AB /* m40a5.png */,
+				192E3393206BACF8007C66AB /* m26mass_frg.png */,
+				192E3394206BACF8007C66AB /* ak5c.png */,
+				192E3395206BACF8007C66AB /* rpk12.png */,
+				192E3396206BACF8007C66AB /* acwr.png */,
+				192E3397206BACF8007C66AB /* utas.png */,
+				192E3398206BACF8007C66AB /* knife_neckknife_lines.png */,
+				192E3399206BACF8007C66AB /* scoutelite.png */,
+				192E339A206BACF8007C66AB /* srs_338recon.png */,
+				192E339B206BACF8007C66AB /* m67_grenade.png */,
+				192E339C206BACF8007C66AB /* scarh.png */,
+				192E339D206BACF8007C66AB /* mp412rex.png */,
+				192E339E206BACF8007C66AB /* sh.png */,
+				192E339F206BACF8007C66AB /* ultimax.png */,
+				192E33A0206BACF8007C66AB /* qbz951.png */,
+				192E33A1206BACF8007C66AB /* hvm_starstreak.png */,
+				192E33A2206BACF8007C66AB /* m249.png */,
+				192E33A3206BACF8007C66AB /* knife_tactical2knife.png */,
+				192E33A4206BACF8007C66AB /* knife_combat_acb90.png */,
+				192E33A5206BACF8007C66AB /* p90.png */,
+				192E33A6206BACF8007C66AB /* pecheneg.png */,
+				192E33A7206BACF8007C66AB /* gol.png */,
+				192E33A8206BACF8007C66AB /* jng90.png */,
+				192E33A9206BACF8007C66AB /* fyjs.png */,
+				192E33AA206BACF8007C66AB /* amr_cqb.png */,
+				192E33AB206BACF8007C66AB /* saiga12.png */,
+				192E33AC206BACF8007C66AB /* m93r.png */,
+				192E33AD206BACF8007C66AB /* claymore.png */,
+				192E33AE206BACF8007C66AB /* deserteagle.png */,
+				192E33AF206BACF8007C66AB /* galil_ace53sv.png */,
+				192E33B0206BACF8007C66AB /* knife_diverknife.png */,
+				192E33B1206BACF8007C66AB /* m18_smoke.png */,
+				192E33B2206BACF8007C66AB /* svd12.png */,
+				192E33B3206BACF8007C66AB /* g36c.png */,
+				192E33B4206BACF8007C66AB /* mbt_law.png */,
+				192E33B5206BACF8007C66AB /* m4a1.png */,
+				192E33B6206BACF8007C66AB /* railgun.png */,
+				192E33B7206BACF8007C66AB /* xm25.png */,
+				192E33B8206BACF8007C66AB /* knife_survival.png */,
+				192E33B9206BACF8007C66AB /* m16a4.png */,
+				192E33BA206BACF8007C66AB /* fim92_stinger.png */,
+				192E33BB206BACF8007C66AB /* c100.png */,
+				192E33BC206BACF8007C66AB /* taurus44.png */,
+				192E33BD206BACF8007C66AB /* knife_tactical2knife_lines.png */,
+				192E33BE206BACF8007C66AB /* m26mass_sg.png */,
+				192E33BF206BACF8007C66AB /* m320_3gl.png */,
+				192E33C0206BACF8007C66AB /* fgm172_sraw.png */,
+				192E33C1206BACF8007C66AB /* sa18_igla.png */,
+				192E33C2206BACF8007C66AB /* knife_diverknife_lines.png */,
+				192E33C3206BACF8007C66AB /* knife_trench.png */,
+				192E33C4206BACF8007C66AB /* mgl.png */,
+				192E33C5206BACF8007C66AB /* l96a1.png */,
+				192E33C6206BACF8007C66AB /* steyraug.png */,
+				192E33C7206BACF8007C66AB /* knife_2142knife.png */,
+				192E33C8206BACF8007C66AB /* defib.png */,
+				192E33C9206BACF8007C66AB /* knife.png */,
+				192E33CA206BACF8007C66AB /* galil_ace23.png */,
+				192E33CB206BACF8007C66AB /* ak12.png */,
+				192E33CC206BACF8007C66AB /* fn57.png */,
+				192E33CD206BACF8007C66AB /* knife_tanto.png */,
+				192E33CE206BACF8007C66AB /* knife_improvised.png */,
+				192E33CF206BACF8007C66AB /* m82a3_cqb.png */,
+				192E33D0206BACF8007C66AB /* m60e4.png */,
+				192E33D1206BACF8007C66AB /* m9.png */,
+				192E33D2206BACF8007C66AB /* hk45c.png */,
+				192E33D3206BACF8007C66AB /* qbs09.png */,
+				192E33D4206BACF8007C66AB /* usas12_nv.png */,
+				192E33D5206BACF8007C66AB /* ump9.png */,
+				192E33D6206BACF8007C66AB /* sg553lb.png */,
+				192E33D7206BACF8007C66AB /* groza4.png */,
+				192E33D8206BACF8007C66AB /* p226.png */,
+				192E33D9206BACF8007C66AB /* aek971.png */,
+				192E33DA206BACF8007C66AB /* cbjms.png */,
+				192E33DB206BACF8007C66AB /* handflare.png */,
+				192E33DC206BACF8007C66AB /* unica6.png */,
+				192E33DD206BACF8007C66AB /* mk11.png */,
+				192E33DE206BACF8007C66AB /* repairtool.png */,
+				192E33DF206BACF8007C66AB /* shank.png */,
+				192E33E0206BACF8007C66AB /* knife_carbon.png */,
+				192E33E1206BACF8007C66AB /* knife_bowie.png */,
+				192E33E2206BACF8007C66AB /* sv98.png */,
+				192E33E3206BACF8007C66AB /* knife_weaver.png */,
+				192E33E4206BACF8007C66AB /* mp443_grach.png */,
+				192E33E5206BACF8007C66AB /* usas12_bp.png */,
+				192E33E6206BACF8007C66AB /* asval.png */,
+				192E33E7206BACF8007C66AB /* famas.png */,
+				192E33E8206BACF8007C66AB /* groza1.png */,
+				192E33E9206BACF8007C66AB /* m320_smk.png */,
+				192E33EA206BACF8007C66AB /* dao12.png */,
+				192E33EB206BACF8007C66AB /* m1014.png */,
+				192E33EC206BACF8007C66AB /* m320_flash.png */,
+				192E33ED206BACF8007C66AB /* m320_lvg.png */,
+				192E33EE206BACF8007C66AB /* cs5.png */,
+				192E33EF206BACF8007C66AB /* c4.png */,
+				192E33F0206BACF8007C66AB /* m98b.png */,
+				192E33F1206BACF8007C66AB /* qsz-92.png */,
+				192E33F2206BACF8007C66AB /* m416.png */,
+				192E33F3206BACF8007C66AB /* scorpion.png */,
+				192E33F4206BACF8007C66AB /* magpulpdr.png */,
+				192E33F5206BACF8007C66AB /* bulldog.png */,
+				192E33F6206BACF8007C66AB /* mp7.png */,
+				192E33F7206BACF8007C66AB /* ar160.png */,
+				192E33F8206BACF8007C66AB /* knife_scout.png */,
+			);
+			path = weapons_lineart;
+			sourceTree = "<group>";
+		};
+		192E34AD206BAD9E007C66AB /* MostWeaponKillsVC */ = {
+			isa = PBXGroup;
+			children = (
+				192E34AE206BADC3007C66AB /* MostWeaponKillsVC.swift */,
+			);
+			path = MostWeaponKillsVC;
+			sourceTree = "<group>";
+		};
 		19A3413B2068EA150053D347 /* PlayersList */ = {
 			isa = PBXGroup;
 			children = (
@@ -567,6 +1159,7 @@
 		85AC87472066841F005A7EFA /* NewsTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				192E31D6206BAA46007C66AB /* Reusable */,
 				19B22746206931DB00713815 /* Utils */,
 				85AC87792066B274005A7EFA /* CoreData */,
 				85AC87762066ABA1005A7EFA /* Extension */,
@@ -657,6 +1250,9 @@
 				85AC87832067920B005A7EFA /* Player+Extension.swift */,
 				85AC88FA206A4C60005A7EFA /* PlayerStats+Extension.swift */,
 				85AC88FC206A4C74005A7EFA /* Rank+Extension.swift */,
+				192E34B4206BBAF2007C66AB /* RankStats+Extension.swift */,
+				192E34B0206BB20B007C66AB /* Weapon+Extension.swift */,
+				192E34B2206BB217007C66AB /* WeaponStat+Extension.swift */,
 				85AC878120678CF0005A7EFA /* Fetcher.swift */,
 			);
 			path = CoreData;
@@ -734,6 +1330,7 @@
 			children = (
 				85AC878D2067D776005A7EFA /* maps_icons */,
 				85AC87D6206A2830005A7EFA /* ranks */,
+				192E3344206BACF8007C66AB /* weapons_lineart */,
 			);
 			path = LocalImages;
 			sourceTree = "<group>";
@@ -889,6 +1486,7 @@
 		85AC88F1206A2BDA005A7EFA /* PlayerDetails */ = {
 			isa = PBXGroup;
 			children = (
+				192E34AD206BAD9E007C66AB /* MostWeaponKillsVC */,
 				192E31D3206B8FEE007C66AB /* TeamPlayVC */,
 				85AC8900206A7A46005A7EFA /* RankVC */,
 				85AC8901206A7A56005A7EFA /* StatsVC */,
@@ -1013,119 +1611,244 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				192E3413206BACF9007C66AB /* mg4.png in Resources */,
+				192E3474206BACF9007C66AB /* fgm172_sraw.png in Resources */,
 				85AC88DC206A2831005A7EFA /* r81.png in Resources */,
+				192E3407206BACF9007C66AB /* aku12.png in Resources */,
 				85AC88F7206A4556005A7EFA /* PlayerStats.storyboard in Resources */,
 				85AC88BE206A2831005A7EFA /* r44.png in Resources */,
+				192E3421206BACF9007C66AB /* sar21.png in Resources */,
 				85AC8895206A2831005A7EFA /* r5.png in Resources */,
+				192E340C206BACF9007C66AB /* rfb.png in Resources */,
 				85AC888E206A2831005A7EFA /* r61.png in Resources */,
 				85AC887E206A2831005A7EFA /* r1.png in Resources */,
+				192E343F206BACF9007C66AB /* sks.png in Resources */,
+				192E34AC206BACF9007C66AB /* knife_scout.png in Resources */,
+				192E3484206BACF9007C66AB /* m60e4.png in Resources */,
+				192E3434206BACF9007C66AB /* rgo_impact.png in Resources */,
+				192E347B206BACF9007C66AB /* knife_2142knife.png in Resources */,
+				192E33FB206BACF9007C66AB /* saddlegun.png in Resources */,
+				192E3494206BACF9007C66AB /* knife_carbon.png in Resources */,
 				85AC8868206A2831005A7EFA /* r13.png in Resources */,
+				192E344A206BACF9007C66AB /* acwr.png in Resources */,
+				192E34A5206BACF9007C66AB /* qsz-92.png in Resources */,
 				85AC8867206A2831005A7EFA /* r11.png in Resources */,
 				85AC87AF2067D78A005A7EFA /* xp0_caspian.jpg in Resources */,
+				192E3480206BACF9007C66AB /* fn57.png in Resources */,
 				85AC888C206A2831005A7EFA /* r49.png in Resources */,
 				85AC88F0206A2831005A7EFA /* r35.png in Resources */,
 				85AC88EF206A2831005A7EFA /* r21.png in Resources */,
+				192E3483206BACF9007C66AB /* m82a3_cqb.png in Resources */,
+				192E346B206BACF9007C66AB /* xm25.png in Resources */,
+				192E3435206BACF9007C66AB /* mx4.png in Resources */,
+				192E344C206BACF9007C66AB /* knife_neckknife_lines.png in Resources */,
 				85AC889C206A2831005A7EFA /* r62.png in Resources */,
+				192E3438206BACF9007C66AB /* hawk12g.png in Resources */,
+				192E3497206BACF9007C66AB /* knife_weaver.png in Resources */,
+				192E3447206BACF9007C66AB /* m26mass_frg.png in Resources */,
+				192E3470206BACF9007C66AB /* taurus44.png in Resources */,
 				85AC88CB206A2831005A7EFA /* r69.png in Resources */,
+				192E33FF206BACF9007C66AB /* m200_srr61.png in Resources */,
+				192E345B206BACF9007C66AB /* gol.png in Resources */,
+				192E340F206BACF9007C66AB /* m320_sg.png in Resources */,
+				192E343B206BACF9007C66AB /* spas12.png in Resources */,
 				85AC886A206A2831005A7EFA /* r16.png in Resources */,
+				192E348A206BACF9007C66AB /* sg553lb.png in Resources */,
 				85AC886B206A2831005A7EFA /* r17.png in Resources */,
+				192E349B206BACF9007C66AB /* famas.png in Resources */,
 				85AC88D6206A2831005A7EFA /* r43.png in Resources */,
 				85AC8878206A2831005A7EFA /* r100.png in Resources */,
+				192E3481206BACF9007C66AB /* knife_tanto.png in Resources */,
 				85AC88A1206A2831005A7EFA /* r105.png in Resources */,
 				85AC8872206A2831005A7EFA /* r73.png in Resources */,
+				192E3463206BACF9007C66AB /* galil_ace53sv.png in Resources */,
+				192E347E206BACF9007C66AB /* galil_ace23.png in Resources */,
 				85AC8898206A2831005A7EFA /* r104.png in Resources */,
 				85AC88AA206A2831005A7EFA /* r134.png in Resources */,
+				192E3416206BACF9007C66AB /* m26mass.png in Resources */,
+				192E3411206BACF9007C66AB /* aamine.png in Resources */,
 				85AC88A7206A2831005A7EFA /* r108.png in Resources */,
 				85AC87B12067D78A005A7EFA /* xp2_001.jpg in Resources */,
+				192E3486206BACF9007C66AB /* hk45c.png in Resources */,
+				192E349A206BACF9007C66AB /* asval.png in Resources */,
+				192E3436206BACF9007C66AB /* knife_neckknife.png in Resources */,
+				192E3428206BACF9007C66AB /* m240.png in Resources */,
 				85AC88B6206A2831005A7EFA /* r51.png in Resources */,
 				85AC88CD206A2831005A7EFA /* r133.png in Resources */,
 				85AC88AC206A2831005A7EFA /* r121.png in Resources */,
+				192E3425206BACF9007C66AB /* knife_precisionknife_lines.png in Resources */,
+				192E3466206BACF9007C66AB /* svd12.png in Resources */,
+				192E3418206BACF9007C66AB /* galil_ace21cqb.png in Resources */,
 				85AC8884206A2831005A7EFA /* r103.png in Resources */,
 				85AC8893206A2831005A7EFA /* r106.png in Resources */,
+				192E33FA206BACF9007C66AB /* knife_precisionknife.png in Resources */,
 				85AC87B82067D78A005A7EFA /* xp4_arctic.jpg in Resources */,
+				192E346F206BACF9007C66AB /* c100.png in Resources */,
 				85AC88C8206A2831005A7EFA /* r54.png in Resources */,
+				192E347F206BACF9007C66AB /* ak12.png in Resources */,
+				192E3432206BACF9007C66AB /* dbv12.png in Resources */,
 				85AC87B02067D78A005A7EFA /* mp_journey.jpg in Resources */,
 				85AC87CD2067D78A005A7EFA /* xp3_urbangdn.jpg in Resources */,
 				85AC88E8206A2831005A7EFA /* r27.png in Resources */,
 				85AC8896206A2831005A7EFA /* r7.png in Resources */,
+				192E3400206BACF9007C66AB /* pp2000.png in Resources */,
 				85AC87BF2067D78A005A7EFA /* mp_flooded.jpg in Resources */,
 				85AC88E7206A2831005A7EFA /* r33.png in Resources */,
 				85AC889D206A2831005A7EFA /* r63.png in Resources */,
 				85AC88E1206A2831005A7EFA /* r18.png in Resources */,
 				85AC87B32067D78A005A7EFA /* xp2_002.jpg in Resources */,
 				85AC88D5206A2831005A7EFA /* r57.png in Resources */,
+				192E341D206BACF9007C66AB /* knife_bootknife.png in Resources */,
 				85AC887B206A2831005A7EFA /* r72.png in Resources */,
 				85AC88C7206A2831005A7EFA /* r40.png in Resources */,
+				192E349D206BACF9007C66AB /* m320_smk.png in Resources */,
+				192E343E206BACF9007C66AB /* amr_med.png in Resources */,
 				85AC8891206A2831005A7EFA /* r60.png in Resources */,
 				85AC8865206A2831005A7EFA /* r38.png in Resources */,
 				85AC88B9206A2831005A7EFA /* r123.png in Resources */,
+				192E3498206BACF9007C66AB /* mp443_grach.png in Resources */,
 				85AC889E206A2831005A7EFA /* r139.png in Resources */,
 				85AC887C206A2831005A7EFA /* r99.png in Resources */,
 				85AC88A2206A2831005A7EFA /* r88.png in Resources */,
+				192E349E206BACF9007C66AB /* dao12.png in Resources */,
 				85AC8885206A2831005A7EFA /* r59.png in Resources */,
+				192E3423206BACF9007C66AB /* qbb95.png in Resources */,
 				85AC8889206A2831005A7EFA /* r0.png in Resources */,
+				192E3420206BACF9007C66AB /* knife_sealknife.png in Resources */,
+				192E345E206BACF9007C66AB /* amr_cqb.png in Resources */,
 				85AC888D206A2831005A7EFA /* r107.png in Resources */,
+				192E342E206BACF9007C66AB /* type95b1.png in Resources */,
+				192E3467206BACF9007C66AB /* g36c.png in Resources */,
+				192E349F206BACF9007C66AB /* m1014.png in Resources */,
 				85AC87CA2067D78A005A7EFA /* xp3_prpganda.jpg in Resources */,
 				85AC8890206A2831005A7EFA /* r74.png in Resources */,
 				85AC88ED206A2831005A7EFA /* r34.png in Resources */,
 				85AC88B3206A2831005A7EFA /* r86.png in Resources */,
+				192E3491206BACF9007C66AB /* mk11.png in Resources */,
+				192E3443206BACF9007C66AB /* shorty12g.png in Resources */,
 				85AC88E0206A2831005A7EFA /* r19.png in Resources */,
 				85AC8871206A2831005A7EFA /* r98.png in Resources */,
+				192E3477206BACF9007C66AB /* knife_trench.png in Resources */,
 				85AC88CE206A2831005A7EFA /* r96.png in Resources */,
+				192E3417206BACF9007C66AB /* knife_sealknife_lines.png in Resources */,
+				192E3401206BACF9007C66AB /* an94.png in Resources */,
+				192E3426206BACF9007C66AB /* lsat.png in Resources */,
+				192E340D206BACF9007C66AB /* mtar21.png in Resources */,
+				192E34A2206BACF9007C66AB /* cs5.png in Resources */,
+				192E3408206BACF9007C66AB /* rpg7.png in Resources */,
+				192E3406206BACF9007C66AB /* sr338.png in Resources */,
 				85AC889F206A2831005A7EFA /* r77.png in Resources */,
+				192E3460206BACF9007C66AB /* m93r.png in Resources */,
 				85AC88C9206A2831005A7EFA /* r55.png in Resources */,
+				192E348D206BACF9007C66AB /* aek971.png in Resources */,
 				85AC87562066841F005A7EFA /* LaunchScreen.storyboard in Resources */,
 				85AC88AE206A2831005A7EFA /* r47.png in Resources */,
+				192E340A206BACF9007C66AB /* shield.png in Resources */,
+				192E3499206BACF9007C66AB /* usas12_bp.png in Resources */,
+				192E3457206BACF9007C66AB /* knife_tactical2knife.png in Resources */,
+				192E3490206BACF9007C66AB /* unica6.png in Resources */,
+				192E341A206BACF9007C66AB /* m26mass_flc.png in Resources */,
 				85AC88E3206A2831005A7EFA /* r30.png in Resources */,
+				192E3430206BACF9007C66AB /* cz75.png in Resources */,
+				192E3415206BACF9007C66AB /* m39.png in Resources */,
+				192E342B206BACF9007C66AB /* m136.png in Resources */,
 				85AC889A206A2831005A7EFA /* r138.png in Resources */,
+				192E3488206BACF9007C66AB /* usas12_nv.png in Resources */,
+				192E3419206BACF9007C66AB /* m34_incendiary.png in Resources */,
+				192E34A9206BACF9007C66AB /* bulldog.png in Resources */,
 				85AC87B92067D78A005A7EFA /* xp1_002.jpg in Resources */,
 				85AC8866206A2831005A7EFA /* r39.png in Resources */,
+				192E341C206BACF9007C66AB /* m82a3_med.png in Resources */,
 				85AC88E6206A2831005A7EFA /* r140.png in Resources */,
 				85AC88DD206A2831005A7EFA /* r95.png in Resources */,
 				85AC8892206A2831005A7EFA /* r48.png in Resources */,
+				192E34A8206BACF9007C66AB /* magpulpdr.png in Resources */,
 				85AC88D3206A2831005A7EFA /* r131.png in Resources */,
 				85AC888F206A2831005A7EFA /* r75.png in Resources */,
 				85AC87C12067D78A005A7EFA /* mp_prison.jpg in Resources */,
+				192E3414206BACF9007C66AB /* type88.png in Resources */,
+				192E3402206BACF9007C66AB /* rpk74.png in Resources */,
 				85AC8882206A2831005A7EFA /* r116.png in Resources */,
+				192E3441206BACF9007C66AB /* m224_mortar.png in Resources */,
+				192E3445206BACF9007C66AB /* at_mine.png in Resources */,
+				192E3451206BACF9007C66AB /* mp412rex.png in Resources */,
+				192E3462206BACF9007C66AB /* deserteagle.png in Resources */,
 				85AC8877206A2831005A7EFA /* r114.png in Resources */,
+				192E3450206BACF9007C66AB /* scarh.png in Resources */,
 				85AC88C2206A2831005A7EFA /* r83.png in Resources */,
+				192E34A3206BACF9007C66AB /* c4.png in Resources */,
 				85AC88C0206A2831005A7EFA /* r87.png in Resources */,
 				85AC88C4206A2831005A7EFA /* r132.png in Resources */,
 				85AC88EE206A2831005A7EFA /* r20.png in Resources */,
 				85AC87BC2067D78A005A7EFA /* mp_naval.jpg in Resources */,
 				85AC88C5206A2831005A7EFA /* r68.png in Resources */,
 				85AC886D206A2831005A7EFA /* r15.png in Resources */,
+				192E3469206BACF9007C66AB /* m4a1.png in Resources */,
+				192E3404206BACF9007C66AB /* eodbot.png in Resources */,
+				192E34A6206BACF9007C66AB /* m416.png in Resources */,
 				85AC87C22067D78A005A7EFA /* xp0_metro.jpg in Resources */,
+				192E342A206BACF9007C66AB /* sw40.png in Resources */,
 				85AC87CB2067D78A005A7EFA /* mp_damage.jpg in Resources */,
 				85AC88C3206A2831005A7EFA /* r97.png in Resources */,
+				192E3476206BACF9007C66AB /* knife_diverknife_lines.png in Resources */,
+				192E34AB206BACF9007C66AB /* ar160.png in Resources */,
 				85AC88A4206A2831005A7EFA /* r91.png in Resources */,
+				192E3424206BACF9007C66AB /* js2.png in Resources */,
+				192E33FD206BACF9007C66AB /* cz805.png in Resources */,
 				85AC87BB2067D78A005A7EFA /* xp4_subbase.jpg in Resources */,
 				85AC87BA2067D78A005A7EFA /* xp6_cmp.jpg in Resources */,
+				192E34A0206BACF9007C66AB /* m320_flash.png in Resources */,
+				192E348B206BACF9007C66AB /* groza4.png in Resources */,
+				192E3409206BACF9007C66AB /* m82a3_far.png in Resources */,
+				192E3493206BACF9007C66AB /* shank.png in Resources */,
 				85AC87B42067D78A005A7EFA /* xp3_marketpl.jpg in Resources */,
 				85AC887D206A2831005A7EFA /* r3.png in Resources */,
+				192E344B206BACF9007C66AB /* utas.png in Resources */,
 				85AC88A9206A2831005A7EFA /* r120.png in Resources */,
 				85AC888A206A2831005A7EFA /* r4.png in Resources */,
+				192E3475206BACF9007C66AB /* sa18_igla.png in Resources */,
 				85AC88D1206A2831005A7EFA /* r80.png in Resources */,
+				192E347C206BACF9007C66AB /* defib.png in Resources */,
+				192E3429206BACF9007C66AB /* m1911.png in Resources */,
 				85AC88CC206A2831005A7EFA /* r127.png in Resources */,
+				192E342F206BACF9007C66AB /* m320.png in Resources */,
 				85AC88A3206A2831005A7EFA /* r6.png in Resources */,
+				192E3456206BACF9007C66AB /* m249.png in Resources */,
+				192E3449206BACF9007C66AB /* rpk12.png in Resources */,
+				192E33FC206BACF9007C66AB /* machete.png in Resources */,
 				85AC87C62067D78A005A7EFA /* xp2_003.jpg in Resources */,
+				192E3403206BACF9007C66AB /* mpx.png in Resources */,
 				85AC87B72067D78A005A7EFA /* xp4_titan.jpg in Resources */,
 				85AC8870206A2831005A7EFA /* r2.png in Resources */,
 				85AC88DF206A2831005A7EFA /* r25.png in Resources */,
 				85AC8873206A2831005A7EFA /* r129.png in Resources */,
 				85AC88DE206A2831005A7EFA /* r31.png in Resources */,
+				192E31DC206BAA87007C66AB /* WeaponCollectionViewCell.xib in Resources */,
+				192E344D206BACF9007C66AB /* scoutelite.png in Resources */,
 				85AC87BE2067D78A005A7EFA /* mp_siege.jpg in Resources */,
 				85AC88D9206A2831005A7EFA /* r56.png in Resources */,
+				192E33FE206BACF9007C66AB /* galil_ace52cqb.png in Resources */,
 				85AC87C92067D78A005A7EFA /* xp5_night_01.jpg in Resources */,
 				85AC88AB206A2831005A7EFA /* r135.png in Resources */,
 				85AC88DB206A2831005A7EFA /* r124.png in Resources */,
+				192E343C206BACF9007C66AB /* sr2.png in Resources */,
+				192E3464206BACF9007C66AB /* knife_diverknife.png in Resources */,
+				192E3458206BACF9007C66AB /* knife_combat_acb90.png in Resources */,
+				192E346E206BACF9007C66AB /* fim92_stinger.png in Resources */,
 				85AC87B52067D78A005A7EFA /* mp_abandoned.jpg in Resources */,
 				85AC8899206A2831005A7EFA /* r110.png in Resources */,
+				192E3468206BACF9007C66AB /* mbt_law.png in Resources */,
+				192E3454206BACF9007C66AB /* qbz951.png in Resources */,
 				85AC88C1206A2831005A7EFA /* r9.png in Resources */,
 				85AC88A5206A2831005A7EFA /* r85.png in Resources */,
 				85AC87532066841F005A7EFA /* Assets.xcassets in Resources */,
+				192E34A4206BACF9007C66AB /* m98b.png in Resources */,
 				85AC87C72067D78A005A7EFA /* xp0_firestorm.jpg in Resources */,
+				192E3439206BACF9007C66AB /* fgm148_javelin.png in Resources */,
+				192E3427206BACF9007C66AB /* knife_2142knife_lines.png in Resources */,
+				192E3431206BACF9007C66AB /* l86a1.png in Resources */,
 				85AC88E4206A2831005A7EFA /* r26.png in Resources */,
+				192E340B206BACF9007C66AB /* scarhsv.png in Resources */,
 				85AC88A8206A2831005A7EFA /* r46.png in Resources */,
 				85AC87AE2067D78A005A7EFA /* xp1_004.jpg in Resources */,
 				85AC88BF206A2831005A7EFA /* r93.png in Resources */,
@@ -1134,28 +1857,56 @@
 				85AC886E206A2831005A7EFA /* r14.png in Resources */,
 				85AC88BD206A2831005A7EFA /* r50.png in Resources */,
 				85AC8874206A2831005A7EFA /* r67.png in Resources */,
+				192E33F9206BACF9007C66AB /* l85a2.png in Resources */,
 				85AC889B206A2831005A7EFA /* r76.png in Resources */,
+				192E340E206BACF9007C66AB /* v40_mini.png in Resources */,
 				85AC87C82067D78A005A7EFA /* xp2_004.jpg in Resources */,
 				85AC88B8206A2831005A7EFA /* r137.png in Resources */,
 				85AC87CC2067D78A005A7EFA /* mp_tremors.jpg in Resources */,
+				192E341E206BACF9007C66AB /* a91.png in Resources */,
 				85AC88EC206A2831005A7EFA /* r22.png in Resources */,
+				192E343D206BACF9007C66AB /* glock18.png in Resources */,
 				85AC88D8206A2831005A7EFA /* r118.png in Resources */,
+				192E3455206BACF9007C66AB /* hvm_starstreak.png in Resources */,
+				192E342D206BACF9007C66AB /* xm25_smk.png in Resources */,
 				85AC88CF206A2831005A7EFA /* r82.png in Resources */,
+				192E3422206BACF9007C66AB /* ucav.png in Resources */,
 				85AC8869206A2831005A7EFA /* r12.png in Resources */,
 				85AC8880206A2831005A7EFA /* r70.png in Resources */,
+				192E3444206BACF9007C66AB /* amr_far.png in Resources */,
+				192E3410206BACF9007C66AB /* f2000.png in Resources */,
 				85AC8887206A2831005A7EFA /* r71.png in Resources */,
 				85AC88D7206A2831005A7EFA /* r42.png in Resources */,
+				192E3478206BACF9007C66AB /* mgl.png in Resources */,
 				85AC88C6206A2831005A7EFA /* r126.png in Resources */,
+				192E346C206BACF9007C66AB /* knife_survival.png in Resources */,
 				19B2273A20692E8F00713815 /* ServerList.storyboard in Resources */,
 				85AC888B206A2831005A7EFA /* r113.png in Resources */,
 				85AC87BD2067D78A005A7EFA /* xp0_oman.jpg in Resources */,
+				192E348E206BACF9007C66AB /* cbjms.png in Resources */,
+				192E346A206BACF9007C66AB /* railgun.png in Resources */,
+				192E348C206BACF9007C66AB /* p226.png in Resources */,
+				192E347A206BACF9007C66AB /* steyraug.png in Resources */,
+				192E3461206BACF9007C66AB /* claymore.png in Resources */,
 				85AC88E9206A2831005A7EFA /* r23.png in Resources */,
+				192E34A1206BACF9007C66AB /* m320_lvg.png in Resources */,
+				192E346D206BACF9007C66AB /* m16a4.png in Resources */,
+				192E3442206BACF9007C66AB /* qbu88.png in Resources */,
+				192E345F206BACF9007C66AB /* saiga12.png in Resources */,
+				192E3440206BACF9007C66AB /* m2_slam.png in Resources */,
 				85AC88AD206A2831005A7EFA /* r109.png in Resources */,
+				192E348F206BACF9007C66AB /* handflare.png in Resources */,
+				192E345D206BACF9007C66AB /* fyjs.png in Resources */,
+				192E3437206BACF9007C66AB /* mk153_smaw.png in Resources */,
 				85AC88D0206A2831005A7EFA /* r94.png in Resources */,
+				192E345C206BACF9007C66AB /* jng90.png in Resources */,
 				85AC88B1206A2831005A7EFA /* r90.png in Resources */,
 				85AC88E5206A2831005A7EFA /* r32.png in Resources */,
 				85AC87B62067D78A005A7EFA /* xp1_003.jpg in Resources */,
 				85AC88B4206A2831005A7EFA /* r92.png in Resources */,
+				192E3496206BACF9007C66AB /* sv98.png in Resources */,
+				192E341B206BACF9007C66AB /* knife_bootknife_lines.png in Resources */,
+				192E344F206BACF9007C66AB /* m67_grenade.png in Resources */,
 				85AC88BA206A2831005A7EFA /* r122.png in Resources */,
 				85AC88B5206A2831005A7EFA /* r45.png in Resources */,
 				85AC88CA206A2831005A7EFA /* r41.png in Resources */,
@@ -1164,28 +1915,53 @@
 				19B2274120692F6600713815 /* PlayersList.storyboard in Resources */,
 				85AC88BC206A2831005A7EFA /* r136.png in Resources */,
 				85AC88A6206A2831005A7EFA /* r52.png in Resources */,
+				192E3405206BACF9007C66AB /* ump.png in Resources */,
+				192E3465206BACF9007C66AB /* m18_smoke.png in Resources */,
+				192E3453206BACF9007C66AB /* ultimax.png in Resources */,
+				192E343A206BACF9007C66AB /* cslr4.png in Resources */,
+				192E3459206BACF9007C66AB /* p90.png in Resources */,
+				192E3473206BACF9007C66AB /* m320_3gl.png in Resources */,
 				85AC87C52067D78A005A7EFA /* xp1_001.jpg in Resources */,
+				192E34AA206BACF9007C66AB /* mp7.png in Resources */,
+				192E3485206BACF9007C66AB /* m9.png in Resources */,
 				85AC887A206A2831005A7EFA /* r66.png in Resources */,
 				85AC88EA206A2831005A7EFA /* r37.png in Resources */,
 				19B2272E2069209700713815 /* agencyfb-bold.ttf in Resources */,
+				192E3492206BACF9007C66AB /* repairtool.png in Resources */,
+				192E341F206BACF9007C66AB /* xm25_flc.png in Resources */,
+				192E345A206BACF9007C66AB /* pecheneg.png in Resources */,
 				85AC88B7206A2831005A7EFA /* r79.png in Resources */,
+				192E342C206BACF9007C66AB /* remington870.png in Resources */,
+				192E3448206BACF9007C66AB /* ak5c.png in Resources */,
 				85AC87B22067D78A005A7EFA /* mp_resort.jpg in Resources */,
 				85AC88D2206A2831005A7EFA /* r125.png in Resources */,
 				85AC886F206A2831005A7EFA /* r28.png in Resources */,
 				85AC8876206A2831005A7EFA /* r115.png in Resources */,
 				85AC8886206A2831005A7EFA /* r117.png in Resources */,
+				192E3471206BACF9007C66AB /* knife_tactical2knife_lines.png in Resources */,
 				85AC886C206A2831005A7EFA /* r29.png in Resources */,
 				85AC8881206A2831005A7EFA /* r58.png in Resources */,
+				192E34A7206BACF9007C66AB /* scorpion.png in Resources */,
 				85AC88B2206A2831005A7EFA /* r8.png in Resources */,
 				85AC87C02067D78A005A7EFA /* xp3_wtrfront.jpg in Resources */,
+				192E3479206BACF9007C66AB /* l96a1.png in Resources */,
+				192E3489206BACF9007C66AB /* ump9.png in Resources */,
+				192E347D206BACF9007C66AB /* knife.png in Resources */,
 				85AC8897206A2831005A7EFA /* r89.png in Resources */,
 				19B2273220692B6100713815 /* Localizable.strings in Resources */,
+				192E3452206BACF9007C66AB /* sh.png in Resources */,
+				192E3412206BACF9007C66AB /* m84_flashbang.png in Resources */,
 				85AC8888206A2831005A7EFA /* r65.png in Resources */,
 				85AC88E2206A2831005A7EFA /* r24.png in Resources */,
+				192E3482206BACF9007C66AB /* knife_improvised.png in Resources */,
 				85AC88BB206A2831005A7EFA /* r78.png in Resources */,
+				192E3446206BACF9007C66AB /* m40a5.png in Resources */,
+				192E344E206BACF9007C66AB /* srs_338recon.png in Resources */,
 				85AC88A0206A2831005A7EFA /* r111.png in Resources */,
 				85AC8879206A2831005A7EFA /* r128.png in Resources */,
+				192E3487206BACF9007C66AB /* qbs09.png in Resources */,
 				85AC8883206A2831005A7EFA /* r102.png in Resources */,
+				192E3495206BACF9007C66AB /* knife_bowie.png in Resources */,
 				85AC8894206A2831005A7EFA /* r112.png in Resources */,
 				85AC88B0206A2831005A7EFA /* r84.png in Resources */,
 				85AC87C42067D78A005A7EFA /* mp_thedish.jpg in Resources */,
@@ -1193,6 +1969,9 @@
 				85AC87C32067D78A005A7EFA /* xp4_wlkrftry.jpg in Resources */,
 				85AC88D4206A2831005A7EFA /* r119.png in Resources */,
 				85AC8875206A2831005A7EFA /* r101.png in Resources */,
+				192E3433206BACF9007C66AB /* aws.png in Resources */,
+				192E349C206BACF9007C66AB /* groza1.png in Resources */,
+				192E3472206BACF9007C66AB /* m26mass_sg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1359,12 +2138,16 @@
 				19A3413D2068EA3D0053D347 /* PlayersListVC.swift in Sources */,
 				192E31D0206B8A01007C66AB /* Utils.swift in Sources */,
 				85AC87782066ABCB005A7EFA /* MoyaProvider+Extension.swift in Sources */,
+				192E31DA206BAA7B007C66AB /* WeaponCollectionViewCell.swift in Sources */,
 				85AC87CF2067DB8B005A7EFA /* UIViewController+Extension.swift in Sources */,
 				85AC878B2067D3CE005A7EFA /* ServerListVC.swift in Sources */,
+				192E34AF206BADC3007C66AB /* MostWeaponKillsVC.swift in Sources */,
 				192E31D2206B8D44007C66AB /* CustomNumberFormatter.swift in Sources */,
 				85AC8903206A7A76005A7EFA /* RankVC.swift in Sources */,
 				85AC877120669F46005A7EFA /* PlayerInfoApi.swift in Sources */,
+				192E34B1206BB20B007C66AB /* Weapon+Extension.swift in Sources */,
 				85AC88FD206A4C74005A7EFA /* Rank+Extension.swift in Sources */,
+				192E34B5206BBAF2007C66AB /* RankStats+Extension.swift in Sources */,
 				85AC87512066841F005A7EFA /* NewsTestProject.xcdatamodeld in Sources */,
 				85AC87752066AA5E005A7EFA /* ServerService.swift in Sources */,
 				85AC87842067920B005A7EFA /* Player+Extension.swift in Sources */,
@@ -1379,6 +2162,7 @@
 				85AC87492066841F005A7EFA /* AppDelegate.swift in Sources */,
 				85AC88F9206A4A2B005A7EFA /* TransformOf+Extension.swift in Sources */,
 				85AC88F5206A2C10005A7EFA /* PlayerStatsVC.swift in Sources */,
+				192E34B3206BB217007C66AB /* WeaponStat+Extension.swift in Sources */,
 				85AC877B2066B287005A7EFA /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

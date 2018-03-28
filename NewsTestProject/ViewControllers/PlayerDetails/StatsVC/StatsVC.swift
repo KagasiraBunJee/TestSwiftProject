@@ -29,7 +29,7 @@ class StatsVC: EmbedParentStatVC {
         spmLabel.text = String(format: "%.2f", stats.spm)
         kpmLabel.text = String(format: "%.2f", stats.kpm)
         killsLabel.text = String(format: "%i", stats.kills)
-        scoreLabel.text = CustomNumberFormatter.decimalFormatter.string(from: NSNumber(value: stats.currentRankScore)) 
+        scoreLabel.text = CustomNumberFormatter.decimalFormatter.string(from: NSNumber(value: stats.currentScore))
         timePlayedLabel.text = String(format: "%@", Utils.timestampToHoursAndMinutes(timestamp: Int(stats.timePlayed)))
     }
 }

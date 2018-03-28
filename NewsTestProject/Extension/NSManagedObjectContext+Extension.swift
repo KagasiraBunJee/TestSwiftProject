@@ -10,4 +10,8 @@ import Foundation
 import ObjectMapper
 import CoreData
 
+protocol Context: MapContext {
+    var customArgs:[String:Any] { get set }
+}
+
 extension NSManagedObjectContext: MapContext {}

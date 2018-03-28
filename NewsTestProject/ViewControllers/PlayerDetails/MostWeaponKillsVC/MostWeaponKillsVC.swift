@@ -10,26 +10,52 @@ import UIKit
 
 class MostWeaponKillsVC: EmbedParentStatVC {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var weaponStats:[WeaponStat] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        collectionView.register(UINib(nibName: "WeaponCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "weaponCell")
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func fillData(with stats: PlayerStats) {
+        super.fillData(with: stats)
+        
+        weaponStats = WeaponStat.getTopKillsStatsByUser(name: stats.player!.name!, count: 5)
+        collectionView.reloadData()
     }
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension MostWeaponKillsVC: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return weaponStats.count
     }
-    */
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return collectionView.dequeueReusableCell(withReuseIdentifier: "weaponCell", for: indexPath)
+    }
+    
+}
 
+extension MostWeaponKillsVC: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        let data = weaponStats[indexPath.row]
+        if let cell = cell as? WeaponCollectionViewCell {
+            cell.fillData(stat: data)
+        }
+    }
+}
+
+extension MostWeaponKillsVC: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 250, height: 100)
+    }
+    
 }
