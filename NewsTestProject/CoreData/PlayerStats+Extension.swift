@@ -54,6 +54,10 @@ extension PlayerStats: StaticMappable {
         numWins <- map["stats.numWins"]
         shotsFired <- map["stats.shotsFired"]
         shotsHit <- map["stats.shotsHit"]
+        kdr <- map["stats.extra.kdr"]
+        spm <- map["stats.extra.spm"]   
+        kpm <- map["stats.extra.kpm"]
+        squadScore <- map["stats.scores.squad"]
         
         rank <- map["player.rank"]
     }

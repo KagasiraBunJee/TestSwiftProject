@@ -28,6 +28,7 @@ extension Rank: StaticMappable {
         img <- map["img"]
         name <- map["name"]
         neededRankScore <- map["needed"]
+        rankProgress <- map["relProg"]
         
         next <- map["next"]
     }
