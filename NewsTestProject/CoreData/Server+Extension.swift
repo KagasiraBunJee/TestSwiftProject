@@ -56,7 +56,7 @@ extension Server: StaticMappable {
         name <- map["name"]
         mapName <- map["map"]
         iprotocol <- map["protocol"]
-        players <- (map["players.list"], MappableTransform<Player>(context: map.context as! NSManagedObjectContext).relationshipTransform())
+        players <- (map["players.list"], MappableTransform<Player>(context: map.context as! NSManagedObjectContext).relationshipSetTransform())
         maxPlayers <- map["players.max"]
         version <- map["version"]
     }

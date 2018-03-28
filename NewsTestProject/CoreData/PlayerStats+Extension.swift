@@ -14,14 +14,14 @@ extension PlayerStats: StaticMappable {
     
     public static func objectForMapping(map: Map) -> BaseMappable? {
         
-        let requestName = (map.JSON["player"] as! NSDictionary)["name"] as! String
+        let playerName = (map.JSON["player"] as! NSDictionary)["name"] as! String
         
-        let predicate = NSPredicate(format: "name == %@", requestName)
+        let predicate = NSPredicate(format: "name == %@", playerName)
         if let item:PlayerStats = Fetcher(context: map.context as! NSManagedObjectContext).fetch(predicate, entityName: "PlayerStats") {
             return item
         }
-        let stat = PlayerStats(context: map.context as! NSManagedObjectContext)
         
+        let stat = PlayerStats(context: map.context as! NSManagedObjectContext)
         if let owner:Player = Fetcher(context: map.context as! NSManagedObjectContext).fetch(predicate, entityName: "Player") {
             stat.player = owner
         }
@@ -30,6 +30,8 @@ extension PlayerStats: StaticMappable {
     }
     
     public func mapping(map: Map) {
+        
+        let plName = (map.JSON["player"] as! NSDictionary)["name"] as! String
         
         //player general stats
         name <- map["player.name"]
@@ -41,10 +43,9 @@ extension PlayerStats: StaticMappable {
         dateUpdate <- (map["player.dateUpdate"], CustomTransform.fromStringToDate())
         lastDay <- (map["player.lastDay"], CustomTransform.fromStringToDate(formatter: CustomDateFormatter.simpleFormatter))
         timePlayed <- map["player.timePlayed"]
-        nextRankScore <- map["player.rank.next.needed"]
+        currentScore <- map["player.score"]
         
         //player combat stats
-        currentRankScore <- map["stats.scores.rankScore"]
         deaths <- map["stats.deaths"]
         headshots <- map["stats.headshots"]
         kills <- map["stats.kills"]
@@ -59,6 +60,10 @@ extension PlayerStats: StaticMappable {
         kpm <- map["stats.extra.kpm"]
         squadScore <- map["stats.scores.squad"]
         
-        rank <- map["player.rank"]
+        rank <- (map["player.rank"], MappableTransform<Rank>(context: map.context as! NSManagedObjectContext).relationshipSingleObjectTransform(withAdditionalKeyValues: ["playerName" : plName]))
+        rankStat <- (map["player.rank"], MappableTransform<RankStat>(context: map.context as! NSManagedObjectContext).relationshipSingleObjectTransform(withAdditionalKeyValues: ["playerName" : plName]))
+        
+        weapons <- (map["weapons"], MappableTransform<Weapon>(context: map.context as! NSManagedObjectContext).relationshipSetTransform(withAdditionalKeyValues: ["playerName" : plName]))
+        weaponStats <- (map["weapons"], MappableTransform<WeaponStat>(context: map.context as! NSManagedObjectContext).relationshipSetTransform(withAdditionalKeyValues: ["playerName" : plName]))
     }
 }

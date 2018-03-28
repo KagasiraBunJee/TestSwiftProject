@@ -28,7 +28,11 @@ class Fetcher: ObjectFetcher {
         let request =  NSFetchRequest<T>(entityName: entityName)
         request.predicate = predicate
         
-        return fetch(withRequest: request).first
+        let result = fetch(withRequest: request)
+        
+        debugPrint(result)
+        
+        return result.first
     }
     
     func fetchArray<T>(_ predicate: NSPredicate, entityName: String) -> [T] where T: NSFetchRequestResult {

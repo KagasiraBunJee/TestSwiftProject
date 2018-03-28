@@ -25,7 +25,7 @@
     <entity name="PlayerStats" representedClassName="PlayerStats" syncable="YES" codeGenerationType="class">
         <attribute name="blStatsLink" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="blUserLink" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="currentRankScore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="currentScore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="dateCheck" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateCreate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateStreak" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -38,7 +38,6 @@
         <attribute name="lastDay" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="longestHeadshot" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nextRankScore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="numLosses" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="numRounds" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="numWins" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -49,15 +48,27 @@
         <attribute name="timePlayed" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="stat" inverseEntity="Player" syncable="YES"/>
         <relationship name="rank" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Rank" inverseName="playerStats" inverseEntity="Rank" syncable="YES"/>
+        <relationship name="rankStat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RankStat" inverseName="playerStat" inverseEntity="RankStat" syncable="YES"/>
+        <relationship name="weapons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Weapon" inverseName="playerStats" inverseEntity="Weapon" syncable="YES"/>
+        <relationship name="weaponStats" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WeaponStat" inverseName="playerStats" inverseEntity="WeaponStat" syncable="YES"/>
     </entity>
     <entity name="Rank" representedClassName="Rank" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="img" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="neededRankScore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="rankProgress" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="next" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Rank" inverseName="next" inverseEntity="Rank" syncable="YES"/>
+        <attribute name="needRankScoreRel" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="next" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Rank" syncable="YES"/>
         <relationship name="playerStats" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlayerStats" inverseName="rank" inverseEntity="PlayerStats" syncable="YES"/>
+        <relationship name="rankStats" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RankStat" inverseName="rank" inverseEntity="RankStat" syncable="YES"/>
+    </entity>
+    <entity name="RankStat" representedClassName="RankStat" syncable="YES" codeGenerationType="class">
+        <attribute name="playerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rankCurrent" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rankCurrentRel" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rankProgress" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="playerStat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlayerStats" inverseName="rankStat" inverseEntity="PlayerStats" syncable="YES"/>
+        <relationship name="rank" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Rank" inverseName="rankStats" inverseEntity="Rank" syncable="YES"/>
     </entity>
     <entity name="Server" representedClassName="Server" syncable="YES" codeGenerationType="class">
         <attribute name="hostname" optional="YES" attributeType="String" syncable="YES"/>
@@ -71,10 +82,29 @@
         <attribute name="version" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="players" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Player" inverseName="server" inverseEntity="Player" syncable="YES"/>
     </entity>
+    <entity name="Weapon" representedClassName="Weapon" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="img" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="playerStats" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlayerStats" inverseName="weapons" inverseEntity="PlayerStats" syncable="YES"/>
+        <relationship name="weaponStats" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WeaponStat" inverseName="weapon" inverseEntity="WeaponStat" syncable="YES"/>
+    </entity>
+    <entity name="WeaponStat" representedClassName="WeaponStat" syncable="YES" codeGenerationType="class">
+        <attribute name="accuracy" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="kills" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="kpm" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="playerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weaponId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="playerStats" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlayerStats" inverseName="weaponStats" inverseEntity="PlayerStats" syncable="YES"/>
+        <relationship name="weapon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Weapon" inverseName="weaponStats" inverseEntity="Weapon" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Player" positionX="-54" positionY="45" width="128" height="345"/>
-        <element name="PlayerStats" positionX="-45" positionY="153" width="128" height="435"/>
-        <element name="Rank" positionX="-27" positionY="162" width="128" height="150"/>
-        <element name="Server" positionX="-63" positionY="-18" width="128" height="195"/>
+        <element name="Player" positionX="-297" positionY="180" width="128" height="345"/>
+        <element name="PlayerStats" positionX="-63" positionY="105" width="128" height="465"/>
+        <element name="Rank" positionX="306" positionY="444" width="128" height="165"/>
+        <element name="RankStat" positionX="-243" positionY="153" width="128" height="135"/>
+        <element name="Server" positionX="-468" positionY="-18" width="128" height="195"/>
+        <element name="Weapon" positionX="-63" positionY="590" width="128" height="120"/>
+        <element name="WeaponStat" positionX="-63" positionY="333" width="128" height="150"/>
     </elements>
 </model>
