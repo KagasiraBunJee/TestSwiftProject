@@ -64,7 +64,16 @@ class PlayersListVC: ParentVC {
             vc.player = player
             self.navigationController?.pushViewController(vc, animated: true)
         }.catch { (error) in
+            
+            guard let _ = player.stat else {
+                self.finishLoading(with: "There is no stats information")
+                return
+            }
             self.finishLoading(with: error.localizedDescription)
+            
+            let vc = VCLoader<PlayerStatsVC>.load(storyboardId: .PlayerStats, inStoryboardID: "playerStats")
+            vc.player = player
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

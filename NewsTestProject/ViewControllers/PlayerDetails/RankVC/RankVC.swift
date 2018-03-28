@@ -22,38 +22,34 @@ class RankVC: EmbedParentStatVC {
     override func fillData(with stats: PlayerStats) {
         super.fillData(with: stats)
         
+        var imagePath = Bundle.main.path(forResource: "r0", ofType: "png")
+        var progress:Float = 0.0
+        var scoreProgressValue = "0/0"
+        
         if let nextRank = stats.rank?.next {
-            guard let imagePath = Bundle.main.path(forResource: nextRank.img, ofType: "png") else {
-                return
-            }
+            imagePath = Bundle.main.path(forResource: nextRank.img, ofType: "png")
             
-            DispatchQueue.global(qos: .background).async {
-                let image = UIImage(contentsOfFile: imagePath)
-                DispatchQueue.main.async {
-                    self.rankImage.image = image
-                }
-            }
+            let beginProgressValue = stats.rank!.neededRankScore
+            let nextRankNeed = nextRank.neededRankScore
+            let currentDeltaProgress = stats.currentRankScore - beginProgressValue
+            let nextRankNeedDelta = nextRankNeed - beginProgressValue
             
-            let scoreProgressValue = String(format: "%i/%i", stats.currentRankScore, stats.nextRankScore)
-            rankProgressValue.text = scoreProgressValue
-            
-            rankProgressView.progress = Float(stats.currentRankScore)/Float(stats.nextRankScore)
+            scoreProgressValue = String(format: "%i/%i", currentDeltaProgress, nextRankNeedDelta)
+            progress = nextRank.rankProgress/100
         } else if let rank = stats.rank {
-            guard let imagePath = Bundle.main.path(forResource: rank.img, ofType: "png") else {
-                return
-            }
-            
-            DispatchQueue.global(qos: .background).async {
-                let image = UIImage(contentsOfFile: imagePath)
-                DispatchQueue.main.async {
-                    self.rankImage.image = image
-                }
-            }
-            
-            let scoreProgressValue = String(format: "%i/%i", stats.currentRankScore, rank.neededRankScore)
-            rankProgressValue.text = scoreProgressValue
-            
-            rankProgressView.progress = 1.0
+            imagePath = Bundle.main.path(forResource: rank.img, ofType: "png")
+            scoreProgressValue = String(format: "%i/%i", stats.currentRankScore, rank.neededRankScore)
+            progress = 1.0
         }
+        
+        DispatchQueue.global(qos: .background).async {
+            let image = UIImage(contentsOfFile: imagePath!)
+            DispatchQueue.main.async {
+                self.rankImage.image = image
+            }
+        }
+        
+        rankProgressValue.text = scoreProgressValue
+        rankProgressView.progress = progress
     }
 }

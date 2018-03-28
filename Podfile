@@ -10,6 +10,7 @@ pod 'KeychainSwift'
 pod 'SVProgressHUD'
 pod 'Kingfisher'
 pod 'ObjectMapper', '~> 3.0'
+pod 'Charts'
 end
 
 target 'NewsTestProject' do

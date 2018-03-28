@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192E31D0206B8A01007C66AB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E31CF206B8A01007C66AB /* Utils.swift */; };
+		192E31D2206B8D44007C66AB /* CustomNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E31D1206B8D44007C66AB /* CustomNumberFormatter.swift */; };
+		192E31D5206B9009007C66AB /* TeamPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E31D4206B9009007C66AB /* TeamPlayVC.swift */; };
 		19A3413D2068EA3D0053D347 /* PlayersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A3413C2068EA3D0053D347 /* PlayersListVC.swift */; };
 		19A341422068F16A0053D347 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A341412068F16A0053D347 /* PlayerCell.swift */; };
 		19B2272E2069209700713815 /* agencyfb-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19B2272D2069209600713815 /* agencyfb-bold.ttf */; };
@@ -232,6 +235,9 @@
 
 /* Begin PBXFileReference section */
 		0FD414CD66F451DD527F872B /* Pods-NewsTestProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsTestProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsTestProjectTests/Pods-NewsTestProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		192E31CF206B8A01007C66AB /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		192E31D1206B8D44007C66AB /* CustomNumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberFormatter.swift; sourceTree = "<group>"; };
+		192E31D4206B9009007C66AB /* TeamPlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPlayVC.swift; sourceTree = "<group>"; };
 		19A3413C2068EA3D0053D347 /* PlayersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersListVC.swift; sourceTree = "<group>"; };
 		19A341412068F16A0053D347 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		19B2272D2069209600713815 /* agencyfb-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "agencyfb-bold.ttf"; sourceTree = "<group>"; };
@@ -485,6 +491,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		192E31D3206B8FEE007C66AB /* TeamPlayVC */ = {
+			isa = PBXGroup;
+			children = (
+				192E31D4206B9009007C66AB /* TeamPlayVC.swift */,
+			);
+			path = TeamPlayVC;
+			sourceTree = "<group>";
+		};
 		19A3413B2068EA150053D347 /* PlayersList */ = {
 			isa = PBXGroup;
 			children = (
@@ -524,6 +538,8 @@
 			children = (
 				19B22747206931E600713815 /* VCLoader.swift */,
 				85AC88FE206A52DD005A7EFA /* CustomDateFormatter.swift */,
+				192E31CF206B8A01007C66AB /* Utils.swift */,
+				192E31D1206B8D44007C66AB /* CustomNumberFormatter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -873,6 +889,7 @@
 		85AC88F1206A2BDA005A7EFA /* PlayerDetails */ = {
 			isa = PBXGroup;
 			children = (
+				192E31D3206B8FEE007C66AB /* TeamPlayVC */,
 				85AC8900206A7A46005A7EFA /* RankVC */,
 				85AC8901206A7A56005A7EFA /* StatsVC */,
 				85AC88F4206A2C10005A7EFA /* PlayerStatsVC.swift */,
@@ -1197,6 +1214,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NewsTestProject/Pods-NewsTestProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
@@ -1208,6 +1226,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
@@ -1280,6 +1299,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NewsTestProjectTests/Pods-NewsTestProjectTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
@@ -1292,6 +1312,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
@@ -1336,9 +1357,11 @@
 				85AC87D420680635005A7EFA /* Error+Extension.swift in Sources */,
 				85AC8907206A7ABD005A7EFA /* EmbedParentStatVC.swift in Sources */,
 				19A3413D2068EA3D0053D347 /* PlayersListVC.swift in Sources */,
+				192E31D0206B8A01007C66AB /* Utils.swift in Sources */,
 				85AC87782066ABCB005A7EFA /* MoyaProvider+Extension.swift in Sources */,
 				85AC87CF2067DB8B005A7EFA /* UIViewController+Extension.swift in Sources */,
 				85AC878B2067D3CE005A7EFA /* ServerListVC.swift in Sources */,
+				192E31D2206B8D44007C66AB /* CustomNumberFormatter.swift in Sources */,
 				85AC8903206A7A76005A7EFA /* RankVC.swift in Sources */,
 				85AC877120669F46005A7EFA /* PlayerInfoApi.swift in Sources */,
 				85AC88FD206A4C74005A7EFA /* Rank+Extension.swift in Sources */,
@@ -1352,6 +1375,7 @@
 				85AC878020678615005A7EFA /* PlayerService.swift in Sources */,
 				85AC876F20669B5B005A7EFA /* ServerApi.swift in Sources */,
 				85AC88FF206A52DD005A7EFA /* CustomDateFormatter.swift in Sources */,
+				192E31D5206B9009007C66AB /* TeamPlayVC.swift in Sources */,
 				85AC87492066841F005A7EFA /* AppDelegate.swift in Sources */,
 				85AC88F9206A4A2B005A7EFA /* TransformOf+Extension.swift in Sources */,
 				85AC88F5206A2C10005A7EFA /* PlayerStatsVC.swift in Sources */,

@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class CustomNumberFormatter {
+    
+    static let decimalFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.usesGroupingSeparator = true
+        formatter.decimalSeparator = ","
+        return formatter
+    }()
+}
