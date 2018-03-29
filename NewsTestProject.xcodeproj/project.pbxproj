@@ -2340,9 +2340,10 @@
 				INFOPLIST_FILE = NewsTestProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.historic.NewsTestProject;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.historic.vkclient-debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "ced600cf-a33a-4253-800c-fe356b4eb677";
+				PROVISIONING_PROFILE_SPECIFIER = "vkclient-debug-dev";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2358,7 +2359,7 @@
 				INFOPLIST_FILE = NewsTestProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.historic.NewsTestProject;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.historic.vkclient-debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

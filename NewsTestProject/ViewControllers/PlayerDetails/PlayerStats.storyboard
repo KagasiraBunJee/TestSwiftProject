@@ -26,9 +26,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="themeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="3Lm-qP-yfY">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" canCancelContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgZ-RX-FQi">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
@@ -148,13 +145,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TgZ-RX-FQi" firstAttribute="leading" secondItem="9Om-SX-4X7" secondAttribute="leading" id="9N1-he-mm1"/>
-                            <constraint firstItem="3Lm-qP-yfY" firstAttribute="leading" secondItem="9Om-SX-4X7" secondAttribute="leading" id="OPy-1r-QTF"/>
                             <constraint firstItem="TgZ-RX-FQi" firstAttribute="bottom" secondItem="9Om-SX-4X7" secondAttribute="bottom" id="V4i-x7-YOg"/>
-                            <constraint firstItem="3Lm-qP-yfY" firstAttribute="trailing" secondItem="9Om-SX-4X7" secondAttribute="trailing" id="czj-1N-Dlk"/>
                             <constraint firstItem="TgZ-RX-FQi" firstAttribute="trailing" secondItem="9Om-SX-4X7" secondAttribute="trailing" id="gro-5T-MLA"/>
-                            <constraint firstItem="3Lm-qP-yfY" firstAttribute="bottom" secondItem="9Om-SX-4X7" secondAttribute="bottom" id="sWR-jO-JIL"/>
                             <constraint firstItem="TgZ-RX-FQi" firstAttribute="top" secondItem="9Om-SX-4X7" secondAttribute="top" id="wCx-we-Rbm"/>
-                            <constraint firstItem="3Lm-qP-yfY" firstAttribute="top" secondItem="9Om-SX-4X7" secondAttribute="top" id="ziL-GF-ozL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Om-SX-4X7"/>
                     </view>
@@ -512,6 +505,5 @@
     </scenes>
     <resources>
         <image name="r48.png" width="256" height="256"/>
-        <image name="themeBackground" width="768" height="1024"/>
     </resources>
 </document>
