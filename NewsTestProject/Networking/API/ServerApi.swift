@@ -28,7 +28,6 @@ extension ServerApi : TargetType {
     var path: String {
         switch self {
         case .addServer(let ip, let port, let game):
-            debugPrint("moya path", String(format: "%@/query/info/%@:%@", game.rawValue, ip, port))
             return String(format: "%@/query/info/%@:%@", game.rawValue, ip, port)
         case .updateServers(let endpoints, let game):
             let stringArray = endpoints.joined(separator: ",")

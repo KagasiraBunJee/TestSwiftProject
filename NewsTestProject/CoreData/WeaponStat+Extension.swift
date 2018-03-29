@@ -14,10 +14,14 @@ extension WeaponStat: StaticMappable {
     
     public static func objectForMapping(map: Map) -> BaseMappable? {
         
-        let playerName = map.JSON["playerName"] as! String
+        guard let playerName = map.JSON["playerName"] as? String else {
+            return nil
+        }
         
         //weapon ID
-        let requestId = (map.JSON["detail"] as! NSDictionary)["id"] as! String
+        guard let requestId = (map.JSON["detail"] as! NSDictionary)["id"] as? String else {
+            return nil
+        }
 
         var weaponStat: WeaponStat!
         

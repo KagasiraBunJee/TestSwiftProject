@@ -14,7 +14,9 @@ extension Weapon: StaticMappable {
     
     public static func objectForMapping(map: Map) -> BaseMappable? {
         
-        let playerName = map.JSON["playerName"] as! String
+        guard let playerName = map.JSON["playerName"] as? String else {
+            return nil
+        }
         
         var weapon:Weapon!
         

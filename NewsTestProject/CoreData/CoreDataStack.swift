@@ -13,6 +13,8 @@ protocol CoreDataStack {
     var persistentContainer: NSPersistentContainer { get }
     var context: NSManagedObjectContext { get }
     var privateContext: NSManagedObjectContext { get }
+    
+    func perform(onBackgroundContext:((NSManagedObjectContext) -> Void)?, onMainContext:((NSManagedObjectContext) -> Void)?, completion:(() -> Void)?)
     func saveContext()
 }
 
@@ -41,15 +43,15 @@ final class CoreDataStackImp: CoreDataStack {
         return privateCtx
     }()
     
-    func perform(backgroundTask:((NSManagedObjectContext) -> Void)?, mainTask:((NSManagedObjectContext) -> Void)?, completion:(() -> Void)?) {
+    func perform(onBackgroundContext:((NSManagedObjectContext) -> Void)?, onMainContext:((NSManagedObjectContext) -> Void)?, completion:(() -> Void)?) {
         let mainCtx = context
         let privateCtx = privateContext
         
         privateCtx.perform({
-            backgroundTask?(privateCtx)
+            onBackgroundContext?(privateCtx)
             try! privateCtx.save()
             mainCtx.performAndWait {
-                mainTask?(mainCtx)
+                onMainContext?(mainCtx)
                 try! mainCtx.save()
                 completion?()
             }

@@ -39,6 +39,8 @@ class PlayersListVC: ParentVC {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = server.name
+        
         refresh.addTarget(self, action: #selector(self.updateInfo), for: .valueChanged)
         tableView.addSubview(refresh)
     }

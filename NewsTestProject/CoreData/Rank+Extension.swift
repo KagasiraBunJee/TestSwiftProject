@@ -14,8 +14,13 @@ extension Rank: StaticMappable {
     
     public static func objectForMapping(map: Map) -> BaseMappable? {
         
-        let playerName = map.JSON["playerName"] as! String
-        let requestId = map.JSON["nr"] as! Int
+        guard let playerName = map.JSON["playerName"] as? String else {
+            return nil
+        }
+        
+        guard let requestId = map.JSON["nr"] as? Int else {
+            return nil
+        }
         
         var rank:Rank!
         

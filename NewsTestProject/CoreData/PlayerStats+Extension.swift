@@ -14,7 +14,13 @@ extension PlayerStats: StaticMappable {
     
     public static func objectForMapping(map: Map) -> BaseMappable? {
         
-        let playerName = (map.JSON["player"] as! NSDictionary)["name"] as! String
+        guard let playerObject = map.JSON["player"] as? NSDictionary else {
+            return nil
+        }
+        
+        guard let playerName = playerObject.object(forKey: "name") as? String else {
+            return nil
+        }
         
         let predicate = NSPredicate(format: "name == %@", playerName)
         if let item:PlayerStats = Fetcher(context: map.context as! NSManagedObjectContext).fetch(predicate, entityName: "PlayerStats") {

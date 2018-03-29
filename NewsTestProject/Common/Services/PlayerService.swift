@@ -34,9 +34,9 @@ final class PlayerServiceImp: PlayerService {
                 
                 var object:PlayerStats?
                 
-                CoreDataStackImp.shared.perform(backgroundTask: { (context) in
+                CoreDataStackImp.shared.perform(onBackgroundContext: { (context) in
                     object = Mapper<PlayerStats>(context: context).map(JSONString: responseObject)
-                }, mainTask: nil, completion: {
+                }, onMainContext: nil, completion: {
                     if let stat = object {
                         pending.resolver.fulfill(stat)
                     } else {

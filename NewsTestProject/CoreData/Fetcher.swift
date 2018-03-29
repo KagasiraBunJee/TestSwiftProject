@@ -29,9 +29,6 @@ class Fetcher: ObjectFetcher {
         request.predicate = predicate
         
         let result = fetch(withRequest: request)
-        
-        debugPrint(result)
-        
         return result.first
     }
     

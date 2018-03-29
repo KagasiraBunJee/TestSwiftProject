@@ -14,7 +14,9 @@ extension RankStat: StaticMappable {
     
     public static func objectForMapping(map: Map) -> BaseMappable? {
         
-        let playerName = map.JSON["playerName"] as! String
+        guard let playerName = map.JSON["playerName"] as? String else {
+            return nil
+        }
         
         var rankStat:RankStat!
         
@@ -32,7 +34,10 @@ extension RankStat: StaticMappable {
             return nil
         }
         
-        var rankID:Int = map.JSON["nr"] as! Int
+        guard let rankID:Int = map.JSON["nr"] as? Int else {
+            return nil
+        }
+        
         let rankPredicate = NSPredicate(format: "id == %i", rankID)
         if let rank:Rank = Fetcher(context: map.context as! NSManagedObjectContext).fetch(rankPredicate, entityName: "Rank") {
             rankStat.rank = rank
