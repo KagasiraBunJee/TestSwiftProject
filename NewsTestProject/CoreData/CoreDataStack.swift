@@ -41,13 +41,6 @@ final class CoreDataStackImp: CoreDataStack {
         return persistentContainer.viewContext
     }()
     
-    lazy var privateContext: NSManagedObjectContext = {
-        let privateCtx = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
-        privateCtx.parent = context
-        privateCtx.automaticallyMergesChangesFromParent = true
-        return privateCtx
-    }()
-    
     func perform(with privateContext:((NSManagedObjectContext) -> Void)?, onMainContext:((NSManagedObjectContext) -> Void)?, completion:(() -> Void)?) {
         
         let mainCtx = context
