@@ -6,30 +6,43 @@
 //  Copyright © 2018 Sergei. All rights reserved.
 //
 
+@testable import NewsTestProject
+
 import XCTest
+import Moya
 
 class ServerPlayer: XCTestCase {
     
+    var playerService:PlayerServiceImp?
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        playerService = PlayerServiceImp(api: MoyaProvider<PlayerInfoApi>(stubClosure: MoyaProvider.immediatelyStub))
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        playerService = nil
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testPlayerInfo() {
+        
+        let serverExpectation = expectation(description: "Player Info")
+        
+        playerService?.playerStats(playerName: "").done { player -> Void in
+            XCTAssertNotNil(player)
+            XCTAssertNotNil(player.name)
+            XCTAssertEqual(player.name!, "lHistoric")
+            
+            //rank
+            XCTAssertNotNil(player.rank)
+            XCTAssertEqual(player.rank!.id, 33)
+            serverExpectation.fulfill()
+        }.catch { error -> Void in
+            XCTFail(error.localizedDescription)
         }
+        
+        waitForExpectations(timeout: 5.0, handler: nil)
     }
-    
 }

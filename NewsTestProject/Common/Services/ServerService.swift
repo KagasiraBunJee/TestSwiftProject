@@ -33,8 +33,8 @@ final class ServerServiceImp: ServerService {
             var server:Server?
             let jsonString = try response.mapString()
             
-            CoreDataStackImp.shared.perform(onBackgroundContext: { (context) in
-                server = Mapper<Server>(context: context).map(JSONString: jsonString)
+            CoreDataStackImp.default.perform(with: { (privateContext) in
+                server = Mapper<Server>(context: privateContext).map(JSONString: jsonString)
             }, onMainContext: nil, completion: {
                 if let server = server {
                     pending.resolver.fulfill(server)
@@ -56,9 +56,8 @@ final class ServerServiceImp: ServerService {
             let jsonObject = try response.mapJSON() as! [String:Any]
             
             var servers:[Server] = []
-            let jsonString = try response.mapString()
             
-            CoreDataStackImp.shared.perform(onBackgroundContext: { (context) in
+            CoreDataStackImp.default.perform(with: { (context) in
                 var objects: [Server] = []
                 if endpoints.count > 1 {
                     for endpoint in endpoints {

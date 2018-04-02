@@ -45,7 +45,12 @@ extension ServerApi : TargetType {
     }
     
     var sampleData: Data {
-        return Data()
+        switch self {
+        case .addServer( _, _, _):
+            return NSDataAsset(name: "SingleServer")!.data
+        case .updateServers( _, _):
+            return NSDataAsset(name: "ServerList")!.data
+        }
     }
     
     var task: Task {

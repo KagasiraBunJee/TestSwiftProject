@@ -18,5 +18,9 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>PLAYER_INFO_BF4_API</key>
+	<string>https://api.bf4stats.com/api</string>
+	<key>SERVER_INFO_API</key>
+	<string>https://use.gameapis.net</string>
 </dict>
 </plist>

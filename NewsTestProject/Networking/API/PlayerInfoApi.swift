@@ -39,7 +39,10 @@ extension PlayerInfoApi: TargetType {
     }
     
     var sampleData: Data {
-        return Data()
+        switch self {
+        case .playerInfo(_, _):
+            return NSDataAsset(name: "PlayerStats")!.data
+        }
     }
     
     var task: Task {

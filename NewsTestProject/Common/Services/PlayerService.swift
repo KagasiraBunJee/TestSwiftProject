@@ -34,7 +34,7 @@ final class PlayerServiceImp: PlayerService {
                 
                 var object:PlayerStats?
                 
-                CoreDataStackImp.shared.perform(onBackgroundContext: { (context) in
+                CoreDataStackImp.default.perform(with: { (context) in
                     object = Mapper<PlayerStats>(context: context).map(JSONString: responseObject)
                 }, onMainContext: nil, completion: {
                     if let stat = object {

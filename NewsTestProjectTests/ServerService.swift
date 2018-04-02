@@ -6,30 +6,58 @@
 //  Copyright © 2018 Sergei. All rights reserved.
 //
 
+@testable import NewsTestProject
+
 import XCTest
+import Moya
 
 class ServerService: XCTestCase {
     
+    var serverService: ServerServiceImp?
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        serverService = ServerServiceImp(api: MoyaProvider<ServerApi>(stubClosure: MoyaProvider.immediatelyStub))
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        serverService = nil
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testAddServer() {
+        let serverExpectation = expectation(description: "Add server")
+
+        let testApi = "94.250.199.113"
+        let testPort = "25200"
+        
+        serverService?.addServer(ip: testApi, port: testPort, game: .bf4).done { server -> Void in
+            XCTAssertNotNil(server)
+            XCTAssertTrue(server.status)
+            XCTAssertNotNil(server.hostname)
+            XCTAssertEqual(testApi, server.hostname!)
+            serverExpectation.fulfill()
+        }.catch { error -> Void in
+            XCTFail(error.localizedDescription)
         }
+        
+        waitForExpectations(timeout: 5.0, handler: nil)
     }
     
+    func testServersListUpdate() {
+        let serverExpectation = expectation(description: "Update Server List")
+        
+        let endpoints = ["176.57.170.12:25200","94.250.199.113:25200"]
+        
+        serverService?.refreshServers(endpoints: endpoints, game: .bf4).done { servers -> Void in
+            XCTAssertNotNil(servers)
+            XCTAssert(servers.count > 0)
+            serverExpectation.fulfill()
+        }.catch { error -> Void in
+            XCTFail(error.localizedDescription)
+        }
+        
+        waitForExpectations(timeout: 5.0, handler: nil)
+    }
 }
