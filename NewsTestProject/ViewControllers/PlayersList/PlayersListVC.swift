@@ -24,7 +24,7 @@ class PlayersListVC: ParentVC {
         request.sortDescriptors = [NSSortDescriptor(key: "teamId", ascending: true), NSSortDescriptor(key: "score", ascending: false)]
         request.predicate = NSPredicate(format: "server == %@", server)
         
-        let controller = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataStackImp.shared.context, sectionNameKeyPath: "teamId", cacheName: nil)
+        let controller = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataStackImp.default.context, sectionNameKeyPath: "teamId", cacheName: nil)
         controller.delegate = self
         
         do {

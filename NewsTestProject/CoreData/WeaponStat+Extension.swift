@@ -61,7 +61,7 @@ extension WeaponStat: StaticMappable {
     
     class func getTopKillsStatsByUser(name:String, count: Int) -> [WeaponStat] {
         
-        let context = CoreDataStackImp.shared.context
+        let context = CoreDataStackImp.default.context
         let request = NSFetchRequest<WeaponStat>(entityName: "WeaponStat")
         request.sortDescriptors = [NSSortDescriptor(key: "kills", ascending: false)]
         request.predicate = NSPredicate(format: "playerName == %@", name)

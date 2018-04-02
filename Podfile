@@ -6,9 +6,7 @@ use_frameworks!
 def standart_pods
 pod 'Moya'
 pod 'PromiseKit'
-pod 'KeychainSwift'
 pod 'SVProgressHUD'
-pod 'Kingfisher'
 pod 'ObjectMapper', '~> 3.0'
 pod 'Charts'
 end
@@ -19,5 +17,4 @@ end
 
 target 'NewsTestProjectTests' do
 standart_pods
-pod 'Nimble'
 end

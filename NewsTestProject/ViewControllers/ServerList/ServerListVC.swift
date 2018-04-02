@@ -21,7 +21,7 @@ class ServerListVC: ParentVC {
         let request = NSFetchRequest<Server>(entityName: "Server")
         request.sortDescriptors = [NSSortDescriptor(key: "version", ascending: false)]
         
-        let controller = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataStackImp.shared.context, sectionNameKeyPath: nil, cacheName: nil)
+        let controller = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataStackImp.default.context, sectionNameKeyPath: nil, cacheName: nil)
         controller.delegate = self
         
         do {

@@ -66,6 +66,6 @@ extension Server: StaticMappable {
     }
     
     class func getServers() -> [Server]{
-        return Fetcher(context: CoreDataStackImp.shared.context).fetchAll(entityName: "Server")
+        return Fetcher(context: CoreDataStackImp.default.context).fetchAll(entityName: "Server")
     }
 }
