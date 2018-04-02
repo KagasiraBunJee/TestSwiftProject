@@ -1,15 +1,14 @@
 //
-//  NewsTestProjectTests.swift
+//  ServerService.swift
 //  NewsTestProjectTests
 //
-//  Created by Sergei on 3/24/18.
+//  Created by Sergii on 4/2/18.
 //  Copyright © 2018 Sergei. All rights reserved.
 //
 
 import XCTest
-@testable import NewsTestProject
 
-class NewsTestProjectTests: XCTestCase {
+class ServerService: XCTestCase {
     
     override func setUp() {
         super.setUp()

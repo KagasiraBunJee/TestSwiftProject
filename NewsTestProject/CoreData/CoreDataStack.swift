@@ -14,22 +14,27 @@ protocol CoreDataStack {
     var context: NSManagedObjectContext { get }
     var privateContext: NSManagedObjectContext { get }
     
-    func perform(onBackgroundContext:((NSManagedObjectContext) -> Void)?, onMainContext:((NSManagedObjectContext) -> Void)?, completion:(() -> Void)?)
+    func perform(with privateContext:((NSManagedObjectContext) -> Void)?, onMainContext:((NSManagedObjectContext) -> Void)?, completion:(() -> Void)?)
     func saveContext()
 }
 
 final class CoreDataStackImp: CoreDataStack {
     
-    static let shared = CoreDataStackImp()
+    private(set) var persistentContainer:NSPersistentContainer
     
-    lazy var persistentContainer: NSPersistentContainer = {
+    init(container: NSPersistentContainer) {
+        self.persistentContainer = container
+        self.persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
+    }
+    
+    static let `default`: CoreDataStackImp = {
         let container = NSPersistentContainer(name: "NewsTestProject")
         container.loadPersistentStores(completionHandler: { (d, error) in
             if let error = error as NSError? {
                 debugPrint("Unresolved error \(error), \(error.userInfo)")
             }
         })
-        return container
+        return CoreDataStackImp(container: container)
     }()
     
     lazy var context: NSManagedObjectContext = {
@@ -43,19 +48,17 @@ final class CoreDataStackImp: CoreDataStack {
         return privateCtx
     }()
     
-    func perform(onBackgroundContext:((NSManagedObjectContext) -> Void)?, onMainContext:((NSManagedObjectContext) -> Void)?, completion:(() -> Void)?) {
-        let mainCtx = context
-        let privateCtx = privateContext
+    func perform(with privateContext:((NSManagedObjectContext) -> Void)?, onMainContext:((NSManagedObjectContext) -> Void)?, completion:(() -> Void)?) {
         
-        privateCtx.perform({
-            onBackgroundContext?(privateCtx)
+        let mainCtx = context
+        persistentContainer.performBackgroundTask { (privateCtx) in
+            privateContext?(privateCtx)
             try! privateCtx.save()
             mainCtx.performAndWait {
-                onMainContext?(mainCtx)
                 try! mainCtx.save()
                 completion?()
             }
-        })
+        }
     }
     
     func saveContext() {
