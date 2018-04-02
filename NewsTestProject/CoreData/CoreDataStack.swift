@@ -12,7 +12,6 @@ import CoreData
 protocol CoreDataStack {
     var persistentContainer: NSPersistentContainer { get }
     var context: NSManagedObjectContext { get }
-    var privateContext: NSManagedObjectContext { get }
     
     func perform(with privateContext:((NSManagedObjectContext) -> Void)?, onMainContext:((NSManagedObjectContext) -> Void)?, completion:(() -> Void)?)
     func saveContext()
