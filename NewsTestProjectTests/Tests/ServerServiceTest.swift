@@ -23,7 +23,7 @@ class ServerServiceTest: XCTestCase {
     }
     
     override func tearDown() {
-//        serverService = nil
+        serverService = nil
         super.tearDown()
     }
     
