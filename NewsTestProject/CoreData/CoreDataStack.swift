@@ -31,8 +31,8 @@ final class CoreDataStackImp: CoreDataStack {
     static let `default`: CoreDataStackImp = {
         let container = NSPersistentContainer(name: "NewsTestProject")
         container.loadPersistentStores(completionHandler: { (d, error) in
-            if let error = error as NSError? {
-                debugPrint("Unresolved error \(error), \(error.userInfo)")
+            if let error = error {
+                debugPrint("Unresolved error: ",error)
             }
         })
         return CoreDataStackImp(container: container)
@@ -50,13 +50,12 @@ final class CoreDataStackImp: CoreDataStack {
                 try! privateCtx.save()
                 let objectID = object.objectID
                 mainCtx.performAndWait {
-                    try! mainCtx.save()
                     do {
+                        try mainCtx.save()
                         if let savedObject = try mainCtx.existingObject(with: objectID) as? T {
                             completion?(savedObject)
                         }
-                    } catch let error {
-                        debugPrint(error)
+                    } catch _ {
                         completion?(nil)
                     }
                 }
@@ -97,9 +96,8 @@ final class CoreDataStackImp: CoreDataStack {
         if context.hasChanges {
             do {
                 try context.save()
-            } catch {
-                let nserror = error as NSError
-                debugPrint("CoreData saveContext: Unresolved error \(nserror), \(nserror.userInfo)")
+            } catch let error {
+                debugPrint("CoreData save error:", error)
             }
         }
     }
