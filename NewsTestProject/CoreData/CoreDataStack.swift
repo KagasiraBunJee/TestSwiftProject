@@ -13,7 +13,9 @@ protocol CoreDataStack {
     var persistentContainer: NSPersistentContainer { get }
     var context: NSManagedObjectContext { get }
     
-    func perform(with privateContext:((NSManagedObjectContext) -> Void)?, onMainContext:((NSManagedObjectContext) -> Void)?, completion:(() -> Void)?)
+    func performSingleSave<T>(with privateContext:((NSManagedObjectContext) -> T?)?, completion:((T?) -> Void)?) where T : NSManagedObject
+    func performMultipleSaving<T>(with privateContext:((NSManagedObjectContext) -> [T]?)?, completion:(([T]?) -> Void)?) where T : NSManagedObject
+    
     func saveContext()
 }
 
@@ -40,15 +42,53 @@ final class CoreDataStackImp: CoreDataStack {
         return persistentContainer.viewContext
     }()
     
-    func perform(with privateContext:((NSManagedObjectContext) -> Void)?, onMainContext:((NSManagedObjectContext) -> Void)?, completion:(() -> Void)?) {
+    func performSingleSave<T>(with privateContext:((NSManagedObjectContext) -> T?)?, completion:((T?) -> Void)?) where T : NSManagedObject {
+
+        let mainCtx = context
+        persistentContainer.performBackgroundTask { (privateCtx) in
+            if let object = privateContext?(privateCtx) {
+                try! privateCtx.save()
+                let objectID = object.objectID
+                mainCtx.performAndWait {
+                    try! mainCtx.save()
+                    do {
+                        if let savedObject = try mainCtx.existingObject(with: objectID) as? T {
+                            completion?(savedObject)
+                        }
+                    } catch let error {
+                        debugPrint(error)
+                        completion?(nil)
+                    }
+                }
+            } else {
+                completion?(nil)
+            }
+        }
+    }
+    
+    func performMultipleSaving<T>(with privateContext:((NSManagedObjectContext) -> [T]?)?, completion:(([T]?) -> Void)?) where T : NSManagedObject {
         
         let mainCtx = context
         persistentContainer.performBackgroundTask { (privateCtx) in
-            privateContext?(privateCtx)
-            try! privateCtx.save()
-            mainCtx.performAndWait {
-                try! mainCtx.save()
-                completion?()
+            if let objects = privateContext?(privateCtx), objects.count > 0 {
+                try! privateCtx.save()
+                let objectIDs = objects.map { $0.objectID }
+                mainCtx.perform {
+                    do {
+                        try mainCtx.save()
+                        var objects = [T]()
+                        for objID in objectIDs {
+                            if let newObj = try mainCtx.existingObject(with: objID) as? T {
+                                objects.append(newObj)
+                            }
+                        }
+                        completion?(objects)
+                    } catch _ {
+                        completion?(nil)
+                    }
+                }
+            } else {
+                completion?(nil)
             }
         }
     }
