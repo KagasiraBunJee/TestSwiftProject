@@ -1,8 +1,8 @@
 //
-//  ServerPlayer.swift
+//  PlayerStatsTest.swift
 //  NewsTestProjectTests
 //
-//  Created by Sergii on 4/2/18.
+//  Created by Sergei on 4/3/18.
 //  Copyright © 2018 Sergei. All rights reserved.
 //
 
@@ -11,14 +11,15 @@
 import XCTest
 import Moya
 
-class ServerPlayer: XCTestCase {
+class PlayerStatsTest: XCTestCase {
     
     var playerService:PlayerServiceImp?
     
     override func setUp() {
         super.setUp()
         
-        playerService = PlayerServiceImp(api: MoyaProvider<PlayerInfoApi>(stubClosure: MoyaProvider.immediatelyStub))
+        playerService = PlayerServiceImp(api: MoyaProvider<PlayerInfoApi>(stubClosure: MoyaProvider.immediatelyStub),
+                                         coreDataStack: CoreDataStackImp(container: CoreDataStackMock.mockPersistantContainer))
     }
     
     override func tearDown() {
@@ -45,4 +46,5 @@ class ServerPlayer: XCTestCase {
         
         waitForExpectations(timeout: 5.0, handler: nil)
     }
+    
 }
