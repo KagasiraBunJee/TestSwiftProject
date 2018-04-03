@@ -32,12 +32,11 @@ final class ServerServiceImp: ServerService {
         let pending = Promise<Server>.pending()
         api.request(.addServer(ip: ip, port: port, game: game)).done { (response) in
             
-            var object:Server?
             let jsonString = try response.mapString()
             
-            self.dataStack.perform(with: { (privateContext) in
-                object = Mapper<Server>(context: privateContext).map(JSONString: jsonString)
-            }, onMainContext: nil, completion: {
+            self.dataStack.performSingleSave(with: { (context) -> Server? in
+                return Mapper<Server>(context: context).map(JSONString: jsonString)
+            }, completion: { (object:Server?) in
                 if let server = object {
                     pending.resolver.fulfill(server)
                 } else {
@@ -55,10 +54,9 @@ final class ServerServiceImp: ServerService {
         let pending = Promise<[Server]>.pending()
         api.request(.updateServers(endpoints: endpoints, game: game)).done { (response) in
             
-            var servers:[Server] = []
             let jsonObject = try response.mapJSON() as! [String:Any]
             
-            self.dataStack.perform(with: { (context) in
+            self.dataStack.performMultipleSaving(with: { (context) -> [Server]? in
                 var objects: [Server] = []
                 if endpoints.count > 1 {
                     for endpoint in endpoints {
@@ -71,9 +69,9 @@ final class ServerServiceImp: ServerService {
                         objects.append(object)
                     }
                 }
-                servers = objects
-            }, onMainContext: nil, completion: {
-                pending.resolver.fulfill(servers)
+                return objects
+            }, completion: { (servers:[Server]?) in
+                pending.resolver.fulfill(servers ?? [])
             })
             
         }.catch { (error) in
