@@ -30,13 +30,12 @@ final class PlayerServiceImp: PlayerService {
     func playerStats(playerName: String) -> Promise<PlayerStats> {
         let pending = Promise<PlayerStats>.pending()
         api.request(.playerInfo(playerName: playerName, game: .bf4)).done { (response) in
-            
-            var object:PlayerStats?
+
             let jsonString = try response.mapString()
             
-            self.dataStack.perform(with: { (privateContext) in
-                object = Mapper<PlayerStats>(context: privateContext).map(JSONString: jsonString)
-            }, onMainContext: nil, completion: {
+            self.dataStack.performSingleSave(with: { (context) -> PlayerStats? in
+                return Mapper<PlayerStats>(context: context).map(JSONString: jsonString)
+            }, completion: { (object: PlayerStats?) in
                 if let stat = object {
                     pending.resolver.fulfill(stat)
                 } else {

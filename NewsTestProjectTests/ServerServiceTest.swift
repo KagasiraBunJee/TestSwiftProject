@@ -23,7 +23,7 @@ class ServerServiceTest: XCTestCase {
     }
     
     override func tearDown() {
-        serverService = nil
+//        serverService = nil
         super.tearDown()
     }
     
@@ -37,6 +37,15 @@ class ServerServiceTest: XCTestCase {
             XCTAssertNotNil(server)
             XCTAssertTrue(server.status)
             XCTAssertNotNil(server.hostname)
+            
+            //check the existance in DB
+            let predicate = NSPredicate(format: "hostname == %@", testApi)
+            let server:Server? = Fetcher(context: self.coreDataStack.context).fetch(predicate, entityName: "Server")
+            
+            XCTAssertNotNil(server)
+            XCTAssertNotNil(server?.hostname)
+            XCTAssertEqual(testApi, server!.hostname!)
+            
             serverExpectation.fulfill()
         }.catch { error -> Void in
             XCTFail(error.localizedDescription)
@@ -53,7 +62,7 @@ class ServerServiceTest: XCTestCase {
         serverService?.refreshServers(endpoints: endpoints, game: .bf4).done { servers -> Void in
             XCTAssertNotNil(servers)
             XCTAssert(servers.count > 0)
-            XCTAssertNotNil(servers[0].hostname!)
+            XCTAssertNotNil(servers[0].hostname)
             let hostnames = servers.flatMap({ $0.hostname })
             XCTAssertNotEqual(hostnames, [])
             serverExpectation.fulfill()
@@ -61,30 +70,6 @@ class ServerServiceTest: XCTestCase {
             XCTFail(error.localizedDescription)
         }
         
-        waitForExpectations(timeout: 5.0, handler: nil)
-    }
-    
-    func testServerRecordExistance() {
-
-        let serverExpectation = expectation(description: "Add server")
-
-        let testApi = "94.250.199.113"
-        let testPort = "25200"
-
-        serverService?.addServer(ip: testApi, port: testPort, game: .bf4).done { _ -> Void in
-
-            let predicate = NSPredicate(format: "hostname == %@", testApi)
-            let server:Server? = Fetcher(context: self.coreDataStack.context).fetch(predicate, entityName: "Server")
-
-            XCTAssertNotNil(server)
-            XCTAssertNotNil(server?.hostname)
-            XCTAssertEqual(testApi, server!.hostname!)
-
-            serverExpectation.fulfill()
-        }.catch { error -> Void in
-            XCTFail(error.localizedDescription)
-        }
-
         waitForExpectations(timeout: 5.0, handler: nil)
     }
 }
