@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iqO-ae-wW5">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,7 +19,7 @@
             <objects>
                 <navigationController id="iqO-ae-wW5" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Igf-Lo-1Sz">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -35,12 +35,11 @@
             <objects>
                 <viewController title="Your servers" id="RuT-VB-PRs" customClass="ServerListVC" customModule="NewsTestProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oU6-l1-5Nb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NS6-7u-gAX">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NS6-7u-gAX">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="serverItem" rowHeight="62" id="ZJr-ko-yVm" customClass="ServerCell" customModule="NewsTestProject" customModuleProvider="target">
@@ -63,19 +62,19 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkc-dv-3oZ">
-                                                    <rect key="frame" x="8" y="47" width="31.5" height="15"/>
+                                                    <rect key="frame" x="8.0000000000000018" y="47" width="31.666666666666671" height="15"/>
                                                     <fontDescription key="fontDescription" name="AgencyFB-Bold" family="AgencyFB" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zu0-BS-FCC">
-                                                    <rect key="frame" x="41.5" y="47" width="27.5" height="15"/>
+                                                    <rect key="frame" x="41.666666666666664" y="47" width="27.333333333333336" height="15"/>
                                                     <fontDescription key="fontDescription" name="AgencyFB-Bold" family="AgencyFB" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players: 0/64" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TR-HG-Tfk">
-                                                    <rect key="frame" x="303.5" y="47" width="63" height="15"/>
+                                                    <rect key="frame" x="303.66666666666669" y="47" width="63" height="15"/>
                                                     <fontDescription key="fontDescription" name="AgencyFB-Bold" family="AgencyFB" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -113,6 +112,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NS6-7u-gAX" firstAttribute="trailing" secondItem="dbW-2L-trJ" secondAttribute="trailing" id="3BZ-iA-vZH"/>
+                            <constraint firstItem="NS6-7u-gAX" firstAttribute="top" secondItem="dbW-2L-trJ" secondAttribute="top" id="C1S-jY-4fJ"/>
+                            <constraint firstItem="NS6-7u-gAX" firstAttribute="leading" secondItem="dbW-2L-trJ" secondAttribute="leading" id="Ffs-y9-I01"/>
+                            <constraint firstItem="dbW-2L-trJ" firstAttribute="bottom" secondItem="NS6-7u-gAX" secondAttribute="bottom" id="hnV-9I-2bM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dbW-2L-trJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Your Servers" id="tJP-OW-Eq1">
