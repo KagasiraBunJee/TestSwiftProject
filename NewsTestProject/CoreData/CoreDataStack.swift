@@ -75,12 +75,9 @@ final class CoreDataStackImp: CoreDataStack {
                 mainCtx.perform {
                     do {
                         try mainCtx.save()
-                        var objects = [T]()
-                        for objID in objectIDs {
-                            if let newObj = try mainCtx.existingObject(with: objID) as? T {
-                                objects.append(newObj)
-                            }
-                        }
+                        let objects = try objectIDs.flatMap({
+                            try mainCtx.existingObject(with: $0) as? T
+                        })
                         completion?(objects)
                     } catch _ {
                         completion?(nil)
