@@ -19,24 +19,26 @@ protocol ServerService: class {
 final class ServerServiceImp: ServerService {
     
     private var api: MoyaProvider<ServerApi>
+    private var dataStack:CoreDataStack!
     
-    static let shared = ServerServiceImp(api: MoyaProvider<ServerApi>())
+    static let shared = ServerServiceImp(api: MoyaProvider<ServerApi>(), coreDataStack: CoreDataStackImp.default)
     
-    init(api: MoyaProvider<ServerApi>) {
+    init(api: MoyaProvider<ServerApi>, coreDataStack: CoreDataStack) {
         self.api = api
+        self.dataStack = coreDataStack
     }
     
     func addServer(ip: String, port: String, game:GameInfo) -> Promise<Server> {
         let pending = Promise<Server>.pending()
         api.request(.addServer(ip: ip, port: port, game: game)).done { (response) in
             
-            var server:Server?
+            var object:Server?
             let jsonString = try response.mapString()
             
-            CoreDataStackImp.default.perform(with: { (privateContext) in
-                server = Mapper<Server>(context: privateContext).map(JSONString: jsonString)
+            self.dataStack.perform(with: { (privateContext) in
+                object = Mapper<Server>(context: privateContext).map(JSONString: jsonString)
             }, onMainContext: nil, completion: {
-                if let server = server {
+                if let server = object {
                     pending.resolver.fulfill(server)
                 } else {
                     pending.resolver.reject(NSError.serverNotFound())
@@ -53,11 +55,10 @@ final class ServerServiceImp: ServerService {
         let pending = Promise<[Server]>.pending()
         api.request(.updateServers(endpoints: endpoints, game: game)).done { (response) in
             
+            var servers:[Server] = []
             let jsonObject = try response.mapJSON() as! [String:Any]
             
-            var servers:[Server] = []
-            
-            CoreDataStackImp.default.perform(with: { (context) in
+            self.dataStack.perform(with: { (context) in
                 var objects: [Server] = []
                 if endpoints.count > 1 {
                     for endpoint in endpoints {
@@ -76,7 +77,7 @@ final class ServerServiceImp: ServerService {
             })
             
         }.catch { (error) in
-                pending.resolver.reject(error)
+            pending.resolver.reject(error)
         }
         return pending.promise
     }

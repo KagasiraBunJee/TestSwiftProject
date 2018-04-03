@@ -18,35 +18,31 @@ protocol PlayerService: class {
 final class PlayerServiceImp: PlayerService {
     
     private var api: MoyaProvider<PlayerInfoApi>
+    private var dataStack:CoreDataStack!
     
-    static let shared = PlayerServiceImp(api: MoyaProvider<PlayerInfoApi>())
+    static let shared = PlayerServiceImp(api: MoyaProvider<PlayerInfoApi>(), coreDataStack: CoreDataStackImp.default)
     
-    init(api: MoyaProvider<PlayerInfoApi>) {
+    init(api: MoyaProvider<PlayerInfoApi>, coreDataStack: CoreDataStack) {
         self.api = api
+        self.dataStack = coreDataStack
     }
     
     func playerStats(playerName: String) -> Promise<PlayerStats> {
         let pending = Promise<PlayerStats>.pending()
         api.request(.playerInfo(playerName: playerName, game: .bf4)).done { (response) in
             
-            do {
-                let responseObject = try response.mapString()
-                
-                var object:PlayerStats?
-                
-                CoreDataStackImp.default.perform(with: { (context) in
-                    object = Mapper<PlayerStats>(context: context).map(JSONString: responseObject)
-                }, onMainContext: nil, completion: {
-                    if let stat = object {
-                        pending.resolver.fulfill(stat)
-                    } else {
-                        pending.resolver.reject(NSError.nothingFound())
-                    }
-                })
-                
-            } catch let error {
-                pending.resolver.reject(error)
-            }
+            var object:PlayerStats?
+            let jsonString = try response.mapString()
+            
+            self.dataStack.perform(with: { (privateContext) in
+                object = Mapper<PlayerStats>(context: privateContext).map(JSONString: jsonString)
+            }, onMainContext: nil, completion: {
+                if let stat = object {
+                    pending.resolver.fulfill(stat)
+                } else {
+                    pending.resolver.reject(NSError.nothingFound())
+                }
+            })
             
         }.catch { (error) in
             pending.resolver.reject(error)

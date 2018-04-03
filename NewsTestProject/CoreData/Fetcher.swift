@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 protocol ObjectFetcher {
+    
     var context: NSManagedObjectContext { get set }
     
     func fetch<T>(withRequest request: NSFetchRequest<T>) -> [T]

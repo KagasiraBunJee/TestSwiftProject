@@ -39,7 +39,6 @@ class TeamPlayVC: EmbedParentStatVC {
         //piechart
         let wins = stats.numWins
         let loses = stats.numLosses
-        let rounds = stats.numRounds
         let winRate = Float(stats.numWins)/Float(stats.numWins + stats.numLosses) * 100
         
         let winEntry = PieChartDataEntry(value: Double(wins), label: "Wins")
