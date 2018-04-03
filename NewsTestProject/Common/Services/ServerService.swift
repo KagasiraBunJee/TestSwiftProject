@@ -32,10 +32,13 @@ final class ServerServiceImp: ServerService {
         let pending = Promise<Server>.pending()
         api.request(.addServer(ip: ip, port: port, game: game)).done { (response) in
             
-            let jsonString = try response.mapString()
-            
             self.dataStack.performSingleSave(with: { (context) -> Server? in
-                return Mapper<Server>(context: context).map(JSONString: jsonString)
+                do {
+                    let jsonString = try response.mapString()
+                    return Mapper<Server>(context: context).map(JSONString: jsonString)
+                } catch {
+                    return nil
+                }
             }, completion: { (object:Server?) in
                 if let server = object {
                     pending.resolver.fulfill(server)
@@ -54,22 +57,26 @@ final class ServerServiceImp: ServerService {
         let pending = Promise<[Server]>.pending()
         api.request(.updateServers(endpoints: endpoints, game: game)).done { (response) in
             
-            let jsonObject = try response.mapJSON() as! [String:Any]
-            
             self.dataStack.performMultipleSaving(with: { (context) -> [Server]? in
-                var objects: [Server] = []
-                if endpoints.count > 1 {
-                    for endpoint in endpoints {
-                        if let object = Mapper<Server>(context: context).map(JSONObject: jsonObject[endpoint]) {
+                do {
+                    let jsonObject = try response.mapJSON() as! [String:Any]
+                    
+                    var objects: [Server] = []
+                    if endpoints.count > 1 {
+                        for endpoint in endpoints {
+                            if let object = Mapper<Server>(context: context).map(JSONObject: jsonObject[endpoint]) {
+                                objects.append(object)
+                            }
+                        }
+                    } else {
+                        if let object = Mapper<Server>(context: context).map(JSONObject: jsonObject) {
                             objects.append(object)
                         }
                     }
-                } else {
-                    if let object = Mapper<Server>(context: context).map(JSONObject: jsonObject) {
-                        objects.append(object)
-                    }
+                    return objects
+                } catch {
+                    return nil
                 }
-                return objects
             }, completion: { (servers:[Server]?) in
                 pending.resolver.fulfill(servers ?? [])
             })
